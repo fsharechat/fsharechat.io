@@ -1,7 +1,7 @@
 const visit = require("unist-util-visit")
 const ssrTemplate = require("./src/internals/ssr.template")
 
-const githubOrgUrl = "https://github.com/questdb"
+const githubOrgUrl = "https://github.com/fsharechat"
 const domain = "https://fsharechat.github.io/"
 
 const customFields = {
@@ -13,12 +13,12 @@ const customFields = {
   dockerUrl: "https://hub.docker.com/r/questdb/questdb",
   domain,
   githubOrgUrl,
-  githubUrl: `${githubOrgUrl}/questdb`,
+  githubUrl: `${githubOrgUrl}`,
   helmVersion: "0.2.4",
-  linkedInUrl: "https://www.linkedin.com/company/questdb/",
+  linkedInUrl: "https://www.linkedin.com/company/comsince/",
   oneLiner: "Fast SQL open source database for time series - QuestDB",
   slackUrl: `https://slack.${domain}`,
-  twitterUrl: "https://twitter.com/questdb",
+  twitterUrl: "https://twitter.com/comsince",
   version: "5.0.3",
 }
 
@@ -50,7 +50,7 @@ function variable() {
 
 const config = {
   title: "Time series data, faster",
-  tagline: "QuestDB is the fastest open source time series database",
+  tagline: "FshareIM是一个开源的即时IM通讯系统,适于私有化部署",
   url: `https://${customFields.domain}`,
   baseUrl: "/",
   favicon: "/img/favicon.png",

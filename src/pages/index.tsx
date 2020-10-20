@@ -165,7 +165,7 @@ const Jumbotron = () => {
     >
       <div className={jumbotronStyles.jumbotron__left}>
         <h1 className={clsx("jumbotron", jumbotronStyles.jumbotron__title)}>
-          Fast SQL for time series
+          你身边的即时通讯IM专家
         </h1>
         <p className={clsx("jumbotron", jumbotronStyles.jumbotron__subtitle)}>
           {siteConfig.tagline}
@@ -173,9 +173,9 @@ const Jumbotron = () => {
         <div className={jumbotronStyles.jumbotron__cta}>
           <Button
             className={jumbotronStyles.jumbotron__link}
-            href={`http://try.${siteConfig.customFields.domain}:9000`}
+            href="https://chat.comsince.cn"
           >
-            Live Demo
+            在线体验
           </Button>
           <Button
             className={clsx(
@@ -198,7 +198,7 @@ const Jumbotron = () => {
           </Button>
         </div>
         <p className={jumbotronStyles.jumbotron__description}>
-          Query our demo dataset with 1.6 billion rows in milliseconds
+          FShareIM是基于Java技术栈的开源即时通讯IM,适合快速私有化部署
         </p>
       </div>
 
