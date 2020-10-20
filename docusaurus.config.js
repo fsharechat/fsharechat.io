@@ -199,7 +199,7 @@ const config = {
             },
             {
               label: "路线图",
-              href: `${customFields.githubUrl}/projects/3`,
+              href: "https://github.com/orgs/fsharechat/projects/1",
             },
             {
               label: "其他",

@@ -34,6 +34,7 @@ module.exports = {
     {
       label: "系统架构",
       type: "category",
+      collapsed: false,
       items: [
         "concept/tech-doc",
         "concept/web-rtc-intro",
@@ -43,6 +44,7 @@ module.exports = {
     {
       label: "安装指南",
       type: "category",
+      collapsed: false,
       items: [
         "guide/centos",
         "guide/ubuntu",
