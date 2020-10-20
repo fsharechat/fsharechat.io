@@ -152,7 +152,7 @@ const config = {
       },
       items: [
         {
-          label: "Install",
+          label: "安装",
           position: "left",
           items: [
             {
@@ -170,13 +170,13 @@ const config = {
           ],
         },
         {
-          label: "Documentation",
+          label: "文档",
           position: "left",
           to: "/docs/introduction/",
           activeBasePath: "docs",
         },
         {
-          label: "Blog",
+          label: "博客",
           to: "/blog/",
           position: "left",
         },
@@ -191,40 +191,40 @@ const config = {
     footer: {
       links: [
         {
-          title: "QuestDB",
+          title: "飞享IM",
           items: [
             {
-              label: "Documentation",
+              label: "文档",
               to: "/docs/introduction/",
             },
             {
-              label: "Roadmap",
+              label: "路线图",
               href: `${customFields.githubUrl}/projects/3`,
             },
             {
-              label: "Careers",
+              label: "其他",
               to: "/careers/",
             },
           ],
         },
         {
-          title: "Community",
+          title: "社区",
           items: [
             {
-              label: "Slack",
+              label: "公众号",
               href: customFields.slackUrl,
             },
             {
-              label: "Twitter",
+              label: "微博",
               href: customFields.twitterUrl,
             },
           ],
         },
         {
-          title: "More",
+          title: "更多",
           items: [
             {
-              label: "Blog",
+              label: "博客",
               to: "/blog/",
             },
             {
