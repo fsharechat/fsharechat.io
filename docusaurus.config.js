@@ -148,7 +148,7 @@ const config = {
       title: " ",
       logo: {
         alt: "QuestDB",
-        src: "/img/navbar/questdb.svg",
+        src: "/img/navbar/fshare.svg",
       },
       items: [
         {
