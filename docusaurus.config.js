@@ -185,13 +185,7 @@ const config = {
           className: "navbar__item--github",
           href: customFields.githubUrl,
           position: "right",
-        },
-        {
-          label: "Join Slack",
-          className: "navbar__item--slack",
-          href: customFields.slackUrl,
-          position: "right",
-        },
+        }
       ],
     },
     footer: {
