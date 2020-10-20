@@ -32,37 +32,21 @@ module.exports = {
       type: "doc",
     },
     {
-      label: "Concepts",
+      label: "系统架构",
       type: "category",
       items: [
-        "concept/storage-model",
-        "concept/designated-timestamp",
-        "concept/sql-extensions",
-        "concept/partitions",
-        "concept/symbol",
-        "concept/indexes",
+        "concept/tech-doc",
+        "concept/web-rtc-intro",
+        "concept/muti-conference-rtc",
       ],
     },
     {
-      label: "Guides",
+      label: "安装指南",
       type: "category",
       items: [
-        {
-          type: "category",
-          label: "Setting up QuestDB",
-          items: ["guide/docker", "guide/homebrew", "guide/binaries"],
-        },
-        {
-          type: "category",
-          label: "Using QuestDB",
-          items: [
-            "guide/web-console",
-            "guide/postgres-wire",
-            "guide/rest",
-            "guide/crud",
-            "guide/my-first-database",
-          ],
-        },
+        "guide/centos",
+        "guide/ubuntu",
+        "guide/windows",
       ],
     },
     {

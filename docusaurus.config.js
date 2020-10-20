@@ -156,16 +156,16 @@ const config = {
           position: "left",
           items: [
             {
-              label: "Docker",
-              to: "/docs/guide/docker/",
+              label: "Centos",
+              to: "/docs/guide/centos/",
             },
             {
-              label: "Homebrew",
-              to: "/docs/guide/homebrew/",
+              label: "Ubuntu",
+              to: "/docs/guide/ubuntu/",
             },
             {
-              label: "From the binaries",
-              to: "/docs/guide/binaries/",
+              label: "Windows",
+              to: "/docs/guide/windows/",
             },
           ],
         },
