@@ -2,7 +2,7 @@ const visit = require("unist-util-visit")
 const ssrTemplate = require("./src/internals/ssr.template")
 
 const githubOrgUrl = "https://github.com/questdb"
-const domain = "questdb.io"
+const domain = "https://fsharechat.github.io/"
 
 const customFields = {
   artifactHubUrl: "https://artifacthub.io/packages/helm/questdb/questdb",
@@ -54,8 +54,8 @@ const config = {
   url: `https://${customFields.domain}`,
   baseUrl: "/",
   favicon: "/img/favicon.png",
-  organizationName: "QuestDB",
-  projectName: "questdb",
+  organizationName: "FshareChat",
+  projectName: "fshareIM",
   customFields,
   plugins: [
     require.resolve("./plugins/fetch-release"),
