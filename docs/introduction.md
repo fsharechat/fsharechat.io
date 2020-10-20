@@ -266,7 +266,7 @@ git branch --set-upstream-to=origin/master
 
 ## 开源协议
 
-本项目使用非商业性署名协议,禁止演绎[Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License](LICENSE)
+本项目使用非商业性署名协议,禁止演绎[Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License]()
 
 ## 一次性赞助
 

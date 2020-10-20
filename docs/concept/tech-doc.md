@@ -584,7 +584,7 @@ password 为 usertoken使用session secret经过AES加密得出的.
 # 音视频通讯
 
 **NOTE:** 目前只支持一对一音视频通话
-音视频通话详见: [实时音视频开发的工程化实践](/2020/03/04/web-rtc)
+音视频通话详见: [实时音视频开发的工程化实践](web-rtc-intro)
 
 **NOTE:** 进行音视频前,请先检查浏览器的支持情况,可以打开此链接[检测](https://www.qcloudtrtc.com/webrtc-samples/abilitytest/index.html)
 
