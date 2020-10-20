@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3">
+<meta httpequiv="x-ua-compatible" content="ie=edge">
+<meta property="og:type" content="website">
+<meta name="author" content="fsharechat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@questdb">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.64">
+<link href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link href="https://www.google-analytics.com" rel="dns-prefetch">
+<link rel="shortcut icon" href="https://https://fsharechat.github.io//img/favicon.png">
+<link rel="apple-touch-icon" sizes="48x48" href="/img/icons/icon-48x48.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="96x96" href="/img/icons/icon-96x96.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/icon-144x144.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="256x256" href="/img/icons/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="384x384" href="/img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/img/icons/icon-512x512.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Time series data, faster Blog RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Time series data, faster Blog Atom Feed">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PVR7M2G"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","GTM-PVR7M2G",{anonymize_ip:!0})</script>
+<link rel="search" type="application/opensearchdescription+xml" title="Time series data, faster" href="/opensearch.xml">
+<link rel="icon" href="/img/favicon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#d14671">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#21222c">
+<link rel="apple-touch-icon" href="/img/favicon.png">
+<link rel="mask-icon" href="/img/favicon.png" content="#fff">
+<meta name="msapplication-TileImage" content="/img/favicon.png">
+<meta name="msapplication-TileColor" content="#21222c"><title data-react-helmet="true">Why performance matters in time-series data | Time series data, faster</title><meta data-react-helmet="true" name="description" content="Thoughts on why speed and performance are crucial to time-series databases ingestion and analysis."><meta data-react-helmet="true" property="og:image" content="https://https://fsharechat.github.io//img/og.png"><meta data-react-helmet="true" property="og:url" content="https://https://fsharechat.github.io/"><meta data-react-helmet="true" property="og:title" content="Why performance matters in time-series data | Time series data, faster"><meta data-react-helmet="true" property="og:description" content="Thoughts on why speed and performance are crucial to time-series databases ingestion and analysis."><meta data-react-helmet="true" name="twitter:image" content="https://https://fsharechat.github.io//img/og.png"><meta data-react-helmet="true" name="twitter:description" content="Thoughts on why speed and performance are crucial to time-series databases ingestion and analysis."><meta data-react-helmet="true" name="twitter:title" content="Why performance matters in time-series data | Time series data, faster"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for &quot;Why performance matters in time-series data | Time series data, faster&quot;"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="true"><link rel="stylesheet" href="/styles.2a8a7e1b.css">
+</head>
+<body itemscope itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="Fast SQL open source database for time series - QuestDB">
+<meta itemprop="description" content="QuestDB is an open source database designed to make time-series lightning fast and easy. It exposes a high performance REST API and supports Postgres wire.">
+<meta itemprop="url" content="https://https://fsharechat.github.io/">
+<meta itemprop="logo" content="https://https://fsharechat.github.io//img/favicon.png">
+<meta itemprop="sameAs" content="https://twitter.com/questdb">
+<meta itemprop="sameAs" content="https://www.linkedin.com/company/questdb/">
+<meta itemprop="sameAs" content="https://www.crunchbase.com/organization/quest-db">
+<meta itemprop="sameAs" content="https://github.com/questdb">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"dark")}()</script><div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner inner_3txf"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand brand_9Wyn" href="/"><img alt="QuestDB" class="navbar__logo" src="/img/navbar/fshare.svg"></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Install</a><ul class="dropdown__menu"><li><a class="dropdown__link" position="left" href="/docs/guide/docker/">Docker</a></li><li><a class="dropdown__link" position="left" href="/docs/guide/homebrew/">Homebrew</a></li><li><a class="dropdown__link" position="left" href="/docs/guide/binaries/">From the binaries</a></li></ul></div><a class="navbar__item navbar__link" href="/docs/introduction/">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog/">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar__item--github">GitHub</a><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span><span class="DocSearch-Button-Key">⌘</span><span class="DocSearch-Button-Key">K</span></button><a class="getStarted_1xnS button_Ni2_ button--primary_316O button--uppercase_35Ce button--xsmall_3jz_" href="/getstarted/">Get Started</a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand brand_9Wyn" href="/"><img alt="QuestDB" class="navbar__logo" src="/img/navbar/fshare.svg"></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a target="_blank" rel="noopener noreferrer" class="menu__link menu__link--sublist">Install</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/docker/">Docker</a></li><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/homebrew/">Homebrew</a></li><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/binaries/">From the binaries</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/docs/introduction/">Documentation</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link navbar__link--active" href="/blog/">Blog</a></li><li class="menu__list-item"><a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer" class="menu__link navbar__item--github">GitHub</a></li></ul></div></div></div></nav><div class="wrapper_1hNx"><div class="container margin-vert--lg"><div class="row"><div class="col col--8 col--offset-2"><article><header><h1 class="margin-bottom--sm blogPostTitle_1mse">Why performance matters in time-series data</h1><div class="margin-vert--md"><time datetime="2020-09-24T00:00:00.000Z" class="blogPostDate_3bQP">September 24, 2020  · 5 min read</time></div><div class="avatar margin-vert--md"><a class="avatar__photo-link avatar__photo" href="https://github.com/NicQuestDB" target="_blank" rel="noreferrer noopener"><img src="https://avatars.githubusercontent.com/NicQuestDB" alt="Nicolas Hourcard"></a><div class="avatar__intro"><h4 class="avatar__name"><a href="https://github.com/NicQuestDB" target="_blank" rel="noreferrer noopener">Nicolas Hourcard</a></h4><small class="avatar__subtitle">QuestDB Team</small></div></div></header><section class="markdown"><p>Thoughts on why speed and performance are crucial to time-series databases
+ingestion and analysis, originally posted in
+<a href="https://thenewstack.io/why-performance-matters-in-time-series-data/" target="_blank" rel="noopener noreferrer">The New Stack</a>.</p><p>Good data from the past helps us make better decisions in the present.</p><p>Most of the data that exist today were created within the past ten years, and
+human data output is only going to grow aggressively from there. The
+<a href="https://www.seagate.com/files/www-content/our-story/trends/files/idc-seagate-dataage-whitepaper.pdf" target="_blank" rel="noopener noreferrer">International Data Corporation predicts</a>
+that the total collected sum of human data will reach 175 zettabytes by 2025.
+One zettabyte is a billion terabytes of course, or a trillion gigabytes,
+depending on which mind-bending measurement you prefer.</p><p>While we have no issue storing and collecting this data, the real trick lies in
+how we process it. Forrester data says as much as
+<a href="https://go.forrester.com/blogs/hadoop-is-datas-darling-for-a-reason/" target="_blank" rel="noopener noreferrer">73% of the data</a>
+within an enterprise goes unused for analytics, a huge missed opportunity to
+capture and process data effectively. That’s why a number of teams are working
+on competitive products to make data more useful.</p><p>QuestDB is concerned with capturing time-series data in particular, which lets
+us represent and understand change over time. Time-series data might pertain to
+changes to the weather, changes in a machine’s performance, or even changes in
+your own weight. But quite unlike weighing yourself once a day and storing those
+standalone states in a database, time-series data calls for capturing every
+single tiny fluctuation in your weight, up or down, whenever you sweat, get
+sick, eat a meal, or use the bathroom.</p><p>Processing this category of data calls for a high-performance system that can
+quickly manipulate lots of individual data points to turn that data into a
+decision-making aid. Performance is uniquely important to time-series data for
+the following reasons.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="time-series-data-is-explosive"></a>Time series data is explosive<a aria-hidden="true" tabindex="-1" class="hash-link" href="#time-series-data-is-explosive" title="Direct link to heading">#</a></h2><p>It’s at the heart of connected devices, the Internet of Things, autonomous cars,
+financial services, and even server farm monitoring. Rather than capture a
+single data point, time-series data calls for capturing tens of thousands of
+data points. But it doesn’t even stop there — not only does time-series data
+keep growing and never stopping, but it can grow in bursts, generating lots of
+readings in a short amount of time.</p><p>A weather station capturing time-series data about wind speed might record zero
+for a long time. But as soon as it gets windy, you’ll get thousands of
+measurements per second because the measurement is changing a lot. It takes a
+high-performing system to capture and record it effectively.</p><p>Time-series data is everywhere a modern technologist looks, and the tools for
+managing it effectively are a little specialized. Otherwise, the exploding need
+for processing power and the simultaneously reduced availability of it becomes a
+supply and demand problem.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="the-end-of-moores-law-is-in-sight"></a>The end of Moore’s law is in sight<a aria-hidden="true" tabindex="-1" class="hash-link" href="#the-end-of-moores-law-is-in-sight" title="Direct link to heading">#</a></h2><p>Improvements in processor power are going to slow down while data continues to
+propagate exponentially. We’re facing a big problem in our quest to process and
+analyze all of this data, and throwing more server racks of improved CPUs at the
+problem will no longer cut it. The lack of performance improvements on the
+hardware side coupled with exploding costs for companies doesn’t help anything
+either. Hardware is tapped out.</p><p>That’s why it’s time to focus on the other side of this equation: the software.
+The solution is to write leaner code that’s more hardware-efficient and extracts
+performance gains from having the software tuned so effectively. This kind of
+software is less reliant on the hardware side for its capabilities, opens up new
+possibilities for harnessing data, and operates in real time without any lag.</p><p>Moore’s law is approaching its physical limit because it’s only possible to fit
+so many transistors into an integrated circuit — most of the performance to data
+has come from hardware, indirectly giving developers permission to write lazy,
+bloated code. But there is much less room for optimizing hardware these days.
+Chip manufacturers are approaching a time when they’d need a new physics to
+improve on today’s modern processors. That means it’s time to focus on improving
+the software.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="it-reduces-your-cloud-bills"></a>It reduces your cloud bills<a aria-hidden="true" tabindex="-1" class="hash-link" href="#it-reduces-your-cloud-bills" title="Direct link to heading">#</a></h2><p>However much data you store and process today, you’re only going to have more
+data tomorrow. If you want to process increased volumes of information in the
+same amount of time, then you need more computing resources, going from one to
+two or more servers as your needs increase. But not only will you pay more to
+your cloud service for this, you’ll also pay your database provider for
+additional software licenses.</p><p>The question becomes: how much value do you actually get out of each machine? If
+one can handle a billion data points, then you know you’ll need a new machine
+for each additional billion. But if you can get 100 billion data points for each
+new machine by using higher-performance software, then you have a really reduced
+cost for each machine. You furthermore end up needing fewer of them.</p><p>Performance in time-series data is about helping you reach the best decision as
+effectively as possible. That’s why QuestDB is glad to be building
+high-performance time-series data solutions that are significantly faster than
+the competition.</p></section><footer class="row margin-vert--lg"><div class="col"><strong>Tags:</strong><a class="margin-horiz--sm" href="/blog/tags/story">story</a></div></footer></article><div></div><div class="margin-vert--xl"><nav class="pagination-nav" aria-label="Blog post page navigation"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/blog/2020/08/25/questitto"><div class="pagination-nav__sublabel">Older Post</div><div class="pagination-nav__label">Light-weight, blazing fast stack for your IoT application »</div></a></div></nav></div></div><div class="col col--2"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#time-series-data-is-explosive" class="table-of-contents__link">Time series data is explosive</a></li><li><a href="#the-end-of-moores-law-is-in-sight" class="table-of-contents__link">The end of Moore’s law is in sight</a></li><li><a href="#it-reduces-your-cloud-bills" class="table-of-contents__link">It reduces your cloud bills</a></li></ul></div></div></div></div></div><footer class="footer_mib0 section_3Kiu"><div class="footer__inner_z0Le section--inner_2xOo"><div class="footer__column_3Npq footer__column--left_1EuR"><img alt="QuestDB logo" class="footer__logo_29Wo" src="/img/footer/questdb.svg" title="QuestDB - Fastest open source database for time series and analytics"><p class="footer__tagline_2F15">QuestDB is the fastest open source time series database</p><a class="footer__github_8UHO button_Ni2_ button--icon_3YKU button--secondary_1x2U button--xsmall_3jz_" href="https://github.com/questdb/questdb" rel="noopener noreferrer" target="_blank"><img alt="GitHub logo" height="22" src="/img/github.svg" title="GitHub" width="22">Star us on GitHub</a></div><div class="footer__column_3Npq footer__column--right_1XPX"><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">QuestDB</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/docs/introduction/">Documentation</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://github.com/questdb/questdb/projects/3" rel="noopener noreferrer" target="_blank">Roadmap</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/careers/">Careers</a></li></ul></div><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">Community</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://slack.https://fsharechat.github.io/" rel="noopener noreferrer" target="_blank">Slack</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://twitter.com/questdb" rel="noopener noreferrer" target="_blank">Twitter</a></li></ul></div><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">More</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/blog/">Blog</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://github.com/questdb/questdb" rel="noopener noreferrer" target="_blank">GitHub</a></li></ul></div></div></div><div class="footer__bottom_2RpL"><p class="footer__copyright_1o2i">Copyright © 2020 QuestDB</p></div></footer></div>
+<script src="/styles.c1a63971.js" defer="defer"></script>
+<script src="/main.6f3bf291.js" defer="defer"></script>
+<script src="/common.3d2125a2.js" defer="defer"></script>
+<script src="/ccc49370.e8c9b56c.js" defer="defer"></script>
+<script src="/09d8624e.ad2d57c5.js" defer="defer"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3">
+<meta httpequiv="x-ua-compatible" content="ie=edge">
+<meta property="og:type" content="website">
+<meta name="author" content="fsharechat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@questdb">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.64">
+<link href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link href="https://www.google-analytics.com" rel="dns-prefetch">
+<link rel="shortcut icon" href="https://https://fsharechat.github.io//img/favicon.png">
+<link rel="apple-touch-icon" sizes="48x48" href="/img/icons/icon-48x48.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="96x96" href="/img/icons/icon-96x96.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/icon-144x144.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="256x256" href="/img/icons/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="384x384" href="/img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/img/icons/icon-512x512.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Time series data, faster Blog RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Time series data, faster Blog Atom Feed">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PVR7M2G"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","GTM-PVR7M2G",{anonymize_ip:!0})</script>
+<link rel="search" type="application/opensearchdescription+xml" title="Time series data, faster" href="/opensearch.xml">
+<link rel="icon" href="/img/favicon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#d14671">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#21222c">
+<link rel="apple-touch-icon" href="/img/favicon.png">
+<link rel="mask-icon" href="/img/favicon.png" content="#fff">
+<meta name="msapplication-TileImage" content="/img/favicon.png">
+<meta name="msapplication-TileColor" content="#21222c"><title data-react-helmet="true">Re-examining our approach to memory mapping | Time series data, faster</title><meta data-react-helmet="true" name="description" content="What we learned by re-examining our approach to memory mapping. A low level implementation, as close as posibble to the kernel, enabled even greater performance."><meta data-react-helmet="true" property="og:url" content="https://https://fsharechat.github.io/"><meta data-react-helmet="true" property="og:title" content="Re-examining our approach to memory mapping | Time series data, faster"><meta data-react-helmet="true" property="og:description" content="What we learned by re-examining our approach to memory mapping. A low level implementation, as close as posibble to the kernel, enabled even greater performance."><meta data-react-helmet="true" name="twitter:image" content="https://https://fsharechat.github.io//img/og.png"><meta data-react-helmet="true" name="twitter:description" content="What we learned by re-examining our approach to memory mapping. A low level implementation, as close as posibble to the kernel, enabled even greater performance."><meta data-react-helmet="true" name="twitter:title" content="Re-examining our approach to memory mapping | Time series data, faster"><meta data-react-helmet="true" property="og:image" content="https://https://fsharechat.github.io//img/blog/2020-08-19/banner.png"><meta data-react-helmet="true" property="twitter:image" content="https://https://fsharechat.github.io//img/blog/2020-08-19/banner.png"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for Re-examining our approach to memory mapping"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="true"><link rel="stylesheet" href="/styles.2a8a7e1b.css">
+</head>
+<body itemscope itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="Fast SQL open source database for time series - QuestDB">
+<meta itemprop="description" content="QuestDB is an open source database designed to make time-series lightning fast and easy. It exposes a high performance REST API and supports Postgres wire.">
+<meta itemprop="url" content="https://https://fsharechat.github.io/">
+<meta itemprop="logo" content="https://https://fsharechat.github.io//img/favicon.png">
+<meta itemprop="sameAs" content="https://twitter.com/questdb">
+<meta itemprop="sameAs" content="https://www.linkedin.com/company/questdb/">
+<meta itemprop="sameAs" content="https://www.crunchbase.com/organization/quest-db">
+<meta itemprop="sameAs" content="https://github.com/questdb">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"dark")}()</script><div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner inner_3txf"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand brand_9Wyn" href="/"><img alt="QuestDB" class="navbar__logo" src="/img/navbar/fshare.svg"></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Install</a><ul class="dropdown__menu"><li><a class="dropdown__link" position="left" href="/docs/guide/docker/">Docker</a></li><li><a class="dropdown__link" position="left" href="/docs/guide/homebrew/">Homebrew</a></li><li><a class="dropdown__link" position="left" href="/docs/guide/binaries/">From the binaries</a></li></ul></div><a class="navbar__item navbar__link" href="/docs/introduction/">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog/">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar__item--github">GitHub</a><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span><span class="DocSearch-Button-Key">⌘</span><span class="DocSearch-Button-Key">K</span></button><a class="getStarted_1xnS button_Ni2_ button--primary_316O button--uppercase_35Ce button--xsmall_3jz_" href="/getstarted/">Get Started</a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand brand_9Wyn" href="/"><img alt="QuestDB" class="navbar__logo" src="/img/navbar/fshare.svg"></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a target="_blank" rel="noopener noreferrer" class="menu__link menu__link--sublist">Install</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/docker/">Docker</a></li><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/homebrew/">Homebrew</a></li><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/binaries/">From the binaries</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/docs/introduction/">Documentation</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link navbar__link--active" href="/blog/">Blog</a></li><li class="menu__list-item"><a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer" class="menu__link navbar__item--github">GitHub</a></li></ul></div></div></div></nav><div class="wrapper_1hNx"><div class="container margin-vert--lg"><div class="row"><div class="col col--8 col--offset-2"><article><header><h1 class="margin-bottom--sm blogPostTitle_1mse">Re-examining our approach to memory mapping</h1><div class="margin-vert--md"><time datetime="2020-08-19T00:00:00.000Z" class="blogPostDate_3bQP">August 19, 2020  · 11 min read</time></div><div class="avatar margin-vert--md"><a class="avatar__photo-link avatar__photo" href="https://github.com/davidgs" target="_blank" rel="noreferrer noopener"><img src="https://avatars.githubusercontent.com/davidgs" alt="David G. Simmons"></a><div class="avatar__intro"><h4 class="avatar__name"><a href="https://github.com/davidgs" target="_blank" rel="noreferrer noopener">David G. Simmons</a></h4><small class="avatar__subtitle">QuestDB Team</small></div></div></header><section class="markdown"><div class="banner" style="font-size:14px;margin-bottom:1rem;text-align:center"><img alt="Hand holding an analog stopwatch" src="/img/blog/2020-08-19/banner.png"><div>Photo by <a href="https://unsplash.com/@veri_ivanova?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Veri Ivanova</a> on <a href="https://unsplash.com/s/photos/speed?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank" rel="noopener noreferrer">Unsplash</a></div></div><p>How does QuestDB get the kind of performance it does, and how are we continuing
+to squeeze another 50-60% out of it? We are constantly learning more about the
+fundamental concepts of memory performance, and this is one example of how what
+we at first thought would be <em>worse</em> for performance ended up bringing us a
+rather substantial boost in overall memory performance.</p><p>We will walk you through how some of our initial thoughts on storage and
+memory-mapping evolved to bring us better performance overall.</p><p>If you like QuestDB, please do give us a star on
+<a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer">GitHub</a></p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="how-the-performance-improvements-started"></a>How the performance improvements started<a aria-hidden="true" tabindex="-1" class="hash-link" href="#how-the-performance-improvements-started" title="Direct link to heading">#</a></h2><p>QuestDB started out with a single-threaded approach to queries and such. But one
+obvious way to improve performance in a Java application like this is to
+parallelize as much as you can by using multiple threads of execution.</p><p>I&#x27;ve written multi-threaded applications, and they are not easy to do. It&#x27;s hard
+to coordinate the work between multiple threads, and to make sure that there are
+no race conditions, collisions, etc.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="storage-performance"></a>Storage performance<a aria-hidden="true" tabindex="-1" class="hash-link" href="#storage-performance" title="Direct link to heading">#</a></h2><p>So first it&#x27;s important to understand that QuestDB stores it&#x27;s data in columnar
+format. We store each column of data in a file. So for every column of data,
+there is a file.</p><p>We then split those columns up into data frames that are independent and can be
+computed completely independently of each other.</p><p>The problem we encountered with this framing scheme was that it was impossible
+to frame variable length data. Data spilled out of the frame, making it
+difficult to manage.</p><p>You see, we store fixed length fields with fixed length values, such that
+aligning frames to 8 bytes would ensure that all our fixed length data does not
+straddle frames. Hence all the columns are the same frame width. But strings and
+blobs can&#x27;t be forced into 8 bytes without making them useless.</p><p>So we could extract extreme performance out of all the fixed-length values, but
+these variable-length values dragged the performance back down.</p><p>Which brings us to pages and how data is referenced in memory.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="pages-of-data"></a>Pages of data<a aria-hidden="true" tabindex="-1" class="hash-link" href="#pages-of-data" title="Direct link to heading">#</a></h2><p>QuestDB uses memory-mapped pages to reference data in order to make it really
+fast. If you&#x27;re dividing up your data into pages, and all data has a fixed
+length, then it&#x27;s relatively easy to ensure that you don&#x27;t have data that spans
+multiple pages. You just break pages at multiples of 8-bytes and everything will
+fit within page boundaries.</p><p>When you add variable-length data, suddenly you cannot ensure that everything
+will line up along page boundaries and you will have the very real possibility
+-- actually a certainty -- that you may have to jump from one page to another
+just to get all the data contained in a frame.</p><p>This, it turns out, is hugely inefficient. If (data is in frame) then (process
+that data) else (figure out where the rest of the data is, get that, then
+process it all). This kind of if-then-else sprinkled throughout the code is a)
+hard to debug and b) leads to lots of branching, which slows down execution.</p><p>In order to prevent variable length data from straddling frames we would need to
+have different frame lengths per column. Furthermore, calculating aligned frame
+lengths for variable length data is non trivial and requires scanning the entire
+data set which would reversing any performance gains from parallelization.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="one-page-to-rule-them-all"></a>One page to rule them all<a aria-hidden="true" tabindex="-1" class="hash-link" href="#one-page-to-rule-them-all" title="Direct link to heading">#</a></h2><p>(Yes, I just made a <em>The Highlander</em>
+<a href="https://en.wikipedia.org/wiki/Highlander_(film)" target="_blank" rel="noopener noreferrer">reference</a>)</p><p>What if, in order to get around data being on multiple pages, we simply used
+<em>one</em> page for all of the data? Of course my first question was &quot;Don&#x27;t you at
+some point reach a limit on the page size?&quot; but Vlad and Patrick assured me
+there is, indeed, no limit on a page size.</p><p>If your page size is bigger than the available memory, the kernel will handle
+swapping pages in and out for you as you try to access different parts of the
+page. So of course I asked &quot;well then, why didn&#x27;t you do this from the
+beginning?&quot;</p><p>Vlad, in his typically self-deprecating style, just said &quot;We didn&#x27;t know. We
+thought we should keep them to a certain size to keep them from growing out of
+control&quot; which, quite frankly, seems like the right answer.</p><p>We&#x27;d just resize those smaller pages as needed. But as Vlad explained, if you do
+that then you need to copy the data over to the new, resized page and &quot;copying
+can take over your life.&quot; Databases aren&#x27;t built to maximize the efficiency of
+data copying. They are built to maximize the ability to extract value from data.
+Copying data from one page to another isn&#x27;t extracting value.</p><p>So they tried just allocating a new page, and jumping from one page to the next
+as needed to find the required data. This cut down on the copying of data, but
+it lead to the problems outlined in the previous section. You never knew which
+page your data was going to be on, and jumping from one page to another was
+hugely inefficient.</p><p>So they tried having just the one page. One massive page (that you can grow as
+needed, without copying data around). Vlad, again in his style, said the
+performance turned out to be &quot;not bad&quot; with this approach. And by &quot;not bad&quot; he
+of course meant about a 60% performance improvement.</p><p>When you get into using one single page, of course the total available address
+space comes into play. But since QuestDB only runs on 64-bit architectures, we
+have 2^64 address space, which is more than enough.</p><p>This is where Patrick jumped in to explain that when you have an area of memory
+mapped from a file, when the file grows you remap the new size into memory. The
+operating system does not need to copy anything; the virtual memory model allows
+the OS to just remap the already mapped pages into the newly mapped memory
+region. In many cases, the OS may have already reserved the entire address space
+for you so your new mapping is in the same region as the old, just bigger.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="kernels-are-smart"></a>Kernels are smart<a aria-hidden="true" tabindex="-1" class="hash-link" href="#kernels-are-smart" title="Direct link to heading">#</a></h2><p>The kernel allocated a full sized address space for your file when you requested
+the memory-mapped file. And apparently this is true across Linux, macOS and
+Windows. So from that point on, there&#x27;s really no further copying that needs to
+happen.</p><p>Furthermore, the kernel is going to handle paging parts of that file in and out
+of memory as needed. Now, I&#x27;m old-school Unix, and page-swapping which lead to
+thrashing was always something we worried about back in the olden days. So I
+asked about it. According to Patrick, this could only happen really if you have
+a massive file that you are reading basically randomly at high speed. Other than
+that, the kernel will handle reading ahead and pre-loading pages as needed in
+order to be as efficient as possible.</p><p>Kernels, it turns out, are smart. In fact, kernels are basically smarter than
+you or I will ever hope to be. They&#x27;ve been developed across decades to be
+hugely efficient at doing these things. It&#x27;s what they do. The kernel will
+memory map the file into the file cache and even if it needs to move stuff
+around, it can move the logical address and it&#x27;s still the same underlying
+physical memory pages.</p><p>If you think that you can take over caching the data from the OS and do a better
+job of managing the memory space, and the allocation and re-allocation of the
+memory, you&#x27;re wrong. Again, this is what the Kernel does, and at some level,
+even if you try to take this job away from the kernel, it is <em>still</em> doing some
+amount of it anyway. So your attempts to take this memory management and
+allocation away from the kernel has done little more than just add another layer
+on top of what the kernel is doing anyway. Another layer on top of something is
+basically never more efficient than the original thing.</p><p>When you read an offset into a file, you send a buffer to read into, the address
+to start reading at, and the offset into the file. Now, the kernel is going to
+cache all of that for you as you do it, because that&#x27;s the kernel&#x27;s job, really.
+But many database developers then take that, and cache it themselves, with their
+own caching scheme.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="speed"></a>Speed<a aria-hidden="true" tabindex="-1" class="hash-link" href="#speed" title="Direct link to heading">#</a></h2><p>When I asked Vlad about this, and how it relates to query speed, he was quite
+explicit in saying that thinking you (a database developer) can beat the kernel
+is pure folly. Postgres tries this and, according to Vlad, an aggregation over a
+large (really large!) dataset can take 5 <em>minutes</em>, whereas the same aggregation
+on QuestDB takes only 60ms. Those aren&#x27;t typos.</p><p>To both Patrick and Vlad (and me, for what that&#x27;s worth), the idea that we, as
+developers, can be better at these operations than the kernel (when really we&#x27;re
+doing them <em>on top of</em> the kernel anyway) is simply ridiculous. If I take an
+army of researchers and spend a decade of development, then <em>maybe</em> I can do it
+better than the kernel, but during that time guess what? The army of people
+working on the kernel will have found further improvements and left me behind
+anyway.</p><p>It comes down to letting the kernel do its job, and us doing ours. And our job
+is to exploit the kernel for every ounce of performance we can get out of it
+without trying to do it&#x27;s job for it.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="conclusions"></a>Conclusions<a aria-hidden="true" tabindex="-1" class="hash-link" href="#conclusions" title="Direct link to heading">#</a></h2><p>When it comes to performance claims, we always try to back them up with actual
+numbers that can be replicated. You can run these tests yourself, and you can
+always go and look at the
+<a href="https://github.com/questdb/questdb/tree/master/benchmarks/src/main/java/org/questdb" target="_blank" rel="noopener noreferrer">source code</a>
+for these tests to see how they are implemented.</p><p>We think these numbers speak for themselves.</p><p>These first results are for the primitives and represent 10,000 reads/writes:</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="32-bit-read"></a>32-bit Read<a aria-hidden="true" tabindex="-1" class="hash-link" href="#32-bit-read" title="Direct link to heading">#</a></h3><table><thead><tr><th>Benchmark</th><th>Mode</th><th>Cnt</th><th>Score</th><th>Units</th></tr></thead><tbody><tr><td>VirtualMemoryReadBenchmark.testIntContiguous</td><td>avgt</td><td>5</td><td>4601.940</td><td>ns/op</td></tr><tr><td>VirtualMemoryReadBenchmark.testIntLegacy</td><td>avgt</td><td>5</td><td>7064.822</td><td>ns/op</td></tr></tbody></table><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="32-bit-write"></a>32-Bit Write<a aria-hidden="true" tabindex="-1" class="hash-link" href="#32-bit-write" title="Direct link to heading">#</a></h3><table><thead><tr><th>Benchmark</th><th>Mode</th><th>Cnt</th><th>Score</th><th>Units</th></tr></thead><tbody><tr><td>VirtualMemoryBenchmark.testPutIntContiguous</td><td>avgt</td><td>5</td><td>5270.264</td><td>ns/op</td></tr><tr><td>VirtualMemoryBenchmark.testPutIntLegacy</td><td>avgt</td><td>5</td><td>5692.148</td><td>ns/op</td></tr></tbody></table><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="64-bit-read"></a>64-bit Read<a aria-hidden="true" tabindex="-1" class="hash-link" href="#64-bit-read" title="Direct link to heading">#</a></h3><table><thead><tr><th>Benchmark</th><th>Mode</th><th>Cnt</th><th>Score</th><th>Units</th></tr></thead><tbody><tr><td>VirtualMemoryLongReadBenchmark.testLongContiguous</td><td>avgt</td><td>5</td><td>4088.338</td><td>ns/op</td></tr><tr><td>VirtualMemoryLongReadBenchmark.testLongLegacy</td><td>avgt</td><td>5</td><td>5022.875</td><td>ns/op</td></tr></tbody></table><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="64-bit-write"></a>64-bit Write<a aria-hidden="true" tabindex="-1" class="hash-link" href="#64-bit-write" title="Direct link to heading">#</a></h3><table><thead><tr><th>Benchmark</th><th>Mode</th><th>Cnt</th><th>Score</th><th>Units</th></tr></thead><tbody><tr><td>VirtualMemoryLongWriteBenchmark.testPutLongContiguous</td><td>avgt</td><td>5</td><td>4413.181</td><td>ns/op</td></tr><tr><td>VirtualMemoryLongWriteBenchmark.testPutLongLegacy</td><td>avgt</td><td>5</td><td>6976.593</td><td>ns/op</td></tr></tbody></table><p>And here are the results for strings, which represent 100 reads/writes:</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="string-read"></a>String Read<a aria-hidden="true" tabindex="-1" class="hash-link" href="#string-read" title="Direct link to heading">#</a></h3><table><thead><tr><th>Benchmark</th><th>Mode</th><th>Cnt</th><th>Score</th><th>Units</th></tr></thead><tbody><tr><td>VirtualMemoryStrReadBenchmark.testGetStrContiguous</td><td>avgt</td><td>5</td><td>300.346</td><td>ns/op</td></tr><tr><td>VirtualMemoryStrReadBenchmark.testGetStrLegacy</td><td>avgt</td><td>5</td><td>525.775</td><td>ns/op</td></tr><tr><td>VirtualMemoryStrWriteBenchmark.testPutStrContiguous</td><td>avgt</td><td>5</td><td>2.019</td><td>ns/op</td></tr><tr><td>VirtualMemoryStrWriteBenchmark.testPutStrLegacy</td><td>avgt</td><td>5</td><td>3.646</td><td>ns/op</td></tr></tbody></table><p>For those of you that are more graphicly-inclined:</p><p><img alt="Benchmark showing the relative performance of primitive types" src="/assets/images/primitives-20aae46c1b4abd47c5142c524ebbc624.png"></p><p><img alt="Benchmark showing the relative performance of string types" src="/assets/images/strings-c15a13ab0f60a61ddfcc943ad4050780.png"></p><p>Again, we think these numbers speak for themselves, but we&#x27;re always happy to
+hear from you, our users and community, about what you think.</p></section><footer class="row margin-vert--lg"><div class="col"><strong>Tags:</strong><a class="margin-horiz--sm" href="/blog/tags/performance">performance</a><a class="margin-horiz--sm" href="/blog/tags/deep-dive">deep-dive</a></div></footer></article><div></div><div class="margin-vert--xl"><nav class="pagination-nav" aria-label="Blog post page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/blog/2020/08/25/questitto"><div class="pagination-nav__sublabel">Newer Post</div><div class="pagination-nav__label">« Light-weight, blazing fast stack for your IoT application</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/blog/2020/08/06/my-journey-writing-questdb"><div class="pagination-nav__sublabel">Older Post</div><div class="pagination-nav__label">My journey making QuestDB »</div></a></div></nav></div></div><div class="col col--2"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#how-the-performance-improvements-started" class="table-of-contents__link">How the performance improvements started</a></li><li><a href="#storage-performance" class="table-of-contents__link">Storage performance</a></li><li><a href="#pages-of-data" class="table-of-contents__link">Pages of data</a></li><li><a href="#one-page-to-rule-them-all" class="table-of-contents__link">One page to rule them all</a></li><li><a href="#kernels-are-smart" class="table-of-contents__link">Kernels are smart</a></li><li><a href="#speed" class="table-of-contents__link">Speed</a></li><li><a href="#conclusions" class="table-of-contents__link">Conclusions</a><ul><li><a href="#32-bit-read" class="table-of-contents__link">32-bit Read</a></li><li><a href="#32-bit-write" class="table-of-contents__link">32-Bit Write</a></li><li><a href="#64-bit-read" class="table-of-contents__link">64-bit Read</a></li><li><a href="#64-bit-write" class="table-of-contents__link">64-bit Write</a></li><li><a href="#string-read" class="table-of-contents__link">String Read</a></li></ul></li></ul></div></div></div></div></div><footer class="footer_mib0 section_3Kiu"><div class="footer__inner_z0Le section--inner_2xOo"><div class="footer__column_3Npq footer__column--left_1EuR"><img alt="QuestDB logo" class="footer__logo_29Wo" src="/img/footer/questdb.svg" title="QuestDB - Fastest open source database for time series and analytics"><p class="footer__tagline_2F15">QuestDB is the fastest open source time series database</p><a class="footer__github_8UHO button_Ni2_ button--icon_3YKU button--secondary_1x2U button--xsmall_3jz_" href="https://github.com/questdb/questdb" rel="noopener noreferrer" target="_blank"><img alt="GitHub logo" height="22" src="/img/github.svg" title="GitHub" width="22">Star us on GitHub</a></div><div class="footer__column_3Npq footer__column--right_1XPX"><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">QuestDB</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/docs/introduction/">Documentation</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://github.com/questdb/questdb/projects/3" rel="noopener noreferrer" target="_blank">Roadmap</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/careers/">Careers</a></li></ul></div><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">Community</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://slack.https://fsharechat.github.io/" rel="noopener noreferrer" target="_blank">Slack</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://twitter.com/questdb" rel="noopener noreferrer" target="_blank">Twitter</a></li></ul></div><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">More</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/blog/">Blog</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://github.com/questdb/questdb" rel="noopener noreferrer" target="_blank">GitHub</a></li></ul></div></div></div><div class="footer__bottom_2RpL"><p class="footer__copyright_1o2i">Copyright © 2020 QuestDB</p></div></footer></div>
+<script src="/styles.c1a63971.js" defer="defer"></script>
+<script src="/main.6f3bf291.js" defer="defer"></script>
+<script src="/common.3d2125a2.js" defer="defer"></script>
+<script src="/ccc49370.e8c9b56c.js" defer="defer"></script>
+<script src="/5cf8d16d.b8a44cad.js" defer="defer"></script>
+</body>
+</html>

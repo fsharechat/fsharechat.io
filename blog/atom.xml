@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://https://fsharechat.github.io/blog</id>
+    <title>Time series data, faster Blog</title>
+    <updated>2020-09-24T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://https://fsharechat.github.io/blog"/>
+    <subtitle>Time series data, faster Blog</subtitle>
+    <icon>https://https://fsharechat.github.io/img/favicon.png</icon>
+    <rights>Copyright © 2020 QuestDB</rights>
+    <entry>
+        <title type="html"><![CDATA[Why performance matters in time-series data]]></title>
+        <id>Why performance matters in time-series data</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/09/24/why-performance-matters"/>
+        <updated>2020-09-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Thoughts on why speed and performance are crucial to time-series databases ingestion and analysis.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Light-weight, blazing fast stack for your IoT application]]></title>
+        <id>Light-weight, blazing fast stack for your IoT application</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/08/25/questitto"/>
+        <updated>2020-08-25T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Create a simple IoT stack with Mosquitto MQTT Broker, Telegraf and QuestDB.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Re-examining our approach to memory mapping]]></title>
+        <id>Re-examining our approach to memory mapping</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/08/19/memory-mapping-deep-dive"/>
+        <updated>2020-08-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What we learned by re-examining our approach to memory mapping. A low level implementation, as close as posibble to the kernel, enabled even greater performance.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[My journey making QuestDB]]></title>
+        <id>My journey making QuestDB</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/08/06/my-journey-writing-questdb"/>
+        <updated>2020-08-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[The detailed story of how the open source time series database QuestDB came to life.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Use QuestDB and get swag!]]></title>
+        <id>Use QuestDB and get swag!</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/07/24/use-questdb-for-swag"/>
+        <updated>2020-07-24T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Participate to the QuestDB community and get rewarded with swag for your contributions.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[InfluxDB line protocol on QuestDB]]></title>
+        <id>InfluxDB line protocol on QuestDB</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/07/22/influxdb-lp-on-tcp"/>
+        <updated>2020-07-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How to use InfluxDB line protocol with QuestDB, this example shows an IoT application.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Demo launch on HackerNews postmorterm]]></title>
+        <id>Demo launch on HackerNews postmorterm</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/07/01/we-put-a-sql-database-on-the-internet"/>
+        <updated>2020-07-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What happens when you put a SQL database on the internet? Demo launch on HackerNews postmortem.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Querying data in a Jupyter Notebook]]></title>
+        <id>Querying data in a Jupyter Notebook</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/06/15/python-questdb-tutorial"/>
+        <updated>2020-06-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Querying data from QuestDB in a Jupyter notebook in a Python application.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[IoT on QuestDB]]></title>
+        <id>IoT on QuestDB</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/06/05/iot-on-questdb"/>
+        <updated>2020-06-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Demonstration of an IoT application with QuestDB. This is based on an Arduino device.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Things we learned about sums]]></title>
+        <id>Things we learned about sums</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/05/12/interesting-things-we-learned-about-sums"/>
+        <updated>2020-05-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[What we learned implementing Kahan and Neumaier compensated sum algorithms, benchmark and comparison with Clickhouse.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Aggregating billions of rows per sec with SIMD]]></title>
+        <id>Aggregating billions of rows per sec with SIMD</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/04/02/using-simd-to-aggregate-billions-of-rows-per-second"/>
+        <updated>2020-04-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[How SIMD instructions made aggregations faster, benchmark and comparison with Postgres.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[The art of thread messaging]]></title>
+        <id>The art of thread messaging</id>
+        <link href="https://https://fsharechat.github.io/blog/2020/03/15/interthread"/>
+        <updated>2020-03-15T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Detailed explanation of QuestDB's thread messaging system. A benchmark also shows the capabilities of this system.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Speeding up InfluxDB line protocol]]></title>
+        <id>Speeding up InfluxDB line protocol</id>
+        <link href="https://https://fsharechat.github.io/blog/2019/12/19/lineprot"/>
+        <updated>2019-12-19T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Comparison between InfluxDB and QuestDB regarding the performance of the line protocol when ingesting data.]]></summary>
+    </entry>
+</feed>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=3">
+<meta httpequiv="x-ua-compatible" content="ie=edge">
+<meta property="og:type" content="website">
+<meta name="author" content="fsharechat">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@questdb">
+<meta name="generator" content="Docusaurus v2.0.0-alpha.64">
+<link href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link href="https://www.google-analytics.com" rel="dns-prefetch">
+<link rel="shortcut icon" href="https://https://fsharechat.github.io//img/favicon.png">
+<link rel="apple-touch-icon" sizes="48x48" href="/img/icons/icon-48x48.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/img/icons/icon-72x72.png">
+<link rel="apple-touch-icon" sizes="96x96" href="/img/icons/icon-96x96.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/img/icons/icon-144x144.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="256x256" href="/img/icons/icon-256x256.png">
+<link rel="apple-touch-icon" sizes="384x384" href="/img/icons/icon-384x384.png">
+<link rel="apple-touch-icon" sizes="512x512" href="/img/icons/icon-512x512.png">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="alternate" type="application/rss+xml" href="/blog/rss.xml" title="Time series data, faster Blog RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/blog/atom.xml" title="Time series data, faster Blog Atom Feed">
+<link rel="preconnect" href="https://www.google-analytics.com">
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PVR7M2G"></script>
+<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","GTM-PVR7M2G",{anonymize_ip:!0})</script>
+<link rel="search" type="application/opensearchdescription+xml" title="Time series data, faster" href="/opensearch.xml">
+<link rel="icon" href="/img/favicon.png">
+<link rel="manifest" href="/manifest.webmanifest">
+<meta name="theme-color" content="#d14671">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#21222c">
+<link rel="apple-touch-icon" href="/img/favicon.png">
+<link rel="mask-icon" href="/img/favicon.png" content="#fff">
+<meta name="msapplication-TileImage" content="/img/favicon.png">
+<meta name="msapplication-TileColor" content="#21222c"><title data-react-helmet="true">Demo launch on HackerNews postmorterm | Time series data, faster</title><meta data-react-helmet="true" name="description" content="What happens when you put a SQL database on the internet? Demo launch on HackerNews postmortem."><meta data-react-helmet="true" property="og:image" content="https://https://fsharechat.github.io//img/og.png"><meta data-react-helmet="true" property="og:url" content="https://https://fsharechat.github.io/"><meta data-react-helmet="true" property="og:title" content="Demo launch on HackerNews postmorterm | Time series data, faster"><meta data-react-helmet="true" property="og:description" content="What happens when you put a SQL database on the internet? Demo launch on HackerNews postmortem."><meta data-react-helmet="true" name="twitter:image" content="https://https://fsharechat.github.io//img/og.png"><meta data-react-helmet="true" name="twitter:description" content="What happens when you put a SQL database on the internet? Demo launch on HackerNews postmortem."><meta data-react-helmet="true" name="twitter:title" content="Demo launch on HackerNews postmorterm | Time series data, faster"><meta data-react-helmet="true" name="twitter:image:alt" content="Image for &quot;Demo launch on HackerNews postmorterm | Time series data, faster&quot;"><link data-react-helmet="true" rel="preconnect" href="https://BH4D9OD16A-dsn.algolia.net" crossorigin="true"><link rel="stylesheet" href="/styles.2a8a7e1b.css">
+</head>
+<body itemscope itemtype="http://schema.org/Organization">
+<meta itemprop="name" content="Fast SQL open source database for time series - QuestDB">
+<meta itemprop="description" content="QuestDB is an open source database designed to make time-series lightning fast and easy. It exposes a high performance REST API and supports Postgres wire.">
+<meta itemprop="url" content="https://https://fsharechat.github.io/">
+<meta itemprop="logo" content="https://https://fsharechat.github.io//img/favicon.png">
+<meta itemprop="sameAs" content="https://twitter.com/questdb">
+<meta itemprop="sameAs" content="https://www.linkedin.com/company/questdb/">
+<meta itemprop="sameAs" content="https://www.crunchbase.com/organization/quest-db">
+<meta itemprop="sameAs" content="https://github.com/questdb">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();t(null!==e?e:"dark")}()</script><div id="__docusaurus">
+<nav class="navbar navbar--light navbar--fixed-top"><div class="navbar__inner inner_3txf"><div class="navbar__items"><div aria-label="Navigation bar toggle" class="navbar__toggle" role="button" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></div><a class="navbar__brand brand_9Wyn" href="/"><img alt="QuestDB" class="navbar__logo" src="/img/navbar/fshare.svg"></a><div class="navbar__item dropdown dropdown--hoverable dropdown--left"><a target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Install</a><ul class="dropdown__menu"><li><a class="dropdown__link" position="left" href="/docs/guide/docker/">Docker</a></li><li><a class="dropdown__link" position="left" href="/docs/guide/homebrew/">Homebrew</a></li><li><a class="dropdown__link" position="left" href="/docs/guide/binaries/">From the binaries</a></li></ul></div><a class="navbar__item navbar__link" href="/docs/introduction/">Documentation</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog/">Blog</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar__item--github">GitHub</a><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span><span class="DocSearch-Button-Key">⌘</span><span class="DocSearch-Button-Key">K</span></button><a class="getStarted_1xnS button_Ni2_ button--primary_316O button--uppercase_35Ce button--xsmall_3jz_" href="/getstarted/">Get Started</a></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div><div class="navbar-sidebar"><div class="navbar-sidebar__brand"><a class="navbar__brand brand_9Wyn" href="/"><img alt="QuestDB" class="navbar__logo" src="/img/navbar/fshare.svg"></a></div><div class="navbar-sidebar__items"><div class="menu"><ul class="menu__list"><li class="menu__list-item"><a target="_blank" rel="noopener noreferrer" class="menu__link menu__link--sublist">Install</a><ul class="menu__list"><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/docker/">Docker</a></li><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/homebrew/">Homebrew</a></li><li class="menu__list-item"><a class="menu__link" position="left" href="/docs/guide/binaries/">From the binaries</a></li></ul></li><li class="menu__list-item"><a class="menu__link" href="/docs/introduction/">Documentation</a></li><li class="menu__list-item"><a aria-current="page" class="menu__link navbar__link--active" href="/blog/">Blog</a></li><li class="menu__list-item"><a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer" class="menu__link navbar__item--github">GitHub</a></li></ul></div></div></div></nav><div class="wrapper_1hNx"><div class="container margin-vert--lg"><div class="row"><div class="col col--8 col--offset-2"><article><header><h1 class="margin-bottom--sm blogPostTitle_1mse">Demo launch on HackerNews postmorterm</h1><div class="margin-vert--md"><time datetime="2020-07-01T00:00:00.000Z" class="blogPostDate_3bQP">July 1, 2020  · 8 min read</time></div><div class="avatar margin-vert--md"><a class="avatar__photo-link avatar__photo" href="https://github.com/davidgs" target="_blank" rel="noreferrer noopener"><img src="https://avatars.githubusercontent.com/davidgs" alt="David G Simmons"></a><div class="avatar__intro"><h4 class="avatar__name"><a href="https://github.com/davidgs" target="_blank" rel="noreferrer noopener">David G Simmons</a></h4><small class="avatar__subtitle">QuestDB Team</small></div></div></header><section class="markdown"><p>What happens when you put a SQL database on the internet? It&#x27;s probably not what
+you&#x27;d expect.</p><p>But we did it. And then we posted it to Hacker News.</p><p>If you listen to, well, pretty much anyone rational, they will tell you in no
+uncertain terms that the last thing you ever want to do is put your SQL Database
+on the internet. And even if you&#x27;re crazy enough to do that, you certainly would
+never go post the address to it on a place like Hacker News. Not unless you were
+a masochist anyway.</p><p>We did it though, and we&#x27;re not even a little bit sorry about it.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="the-idea"></a>The idea<a aria-hidden="true" tabindex="-1" class="hash-link" href="#the-idea" title="Direct link to heading">#</a></h2><p>QuestDB has built what we think is the fastest Open Source SQL Database in
+existence. We really do. And we&#x27;re pretty proud of it, in fact. So much so that
+we wanted to give anyone that wanted the opportunity a chance to take it for a
+spin. With real data. Doing real queries. Almost anyone can pull together a demo
+that performs great under just the right conditions, with all the parameters
+tightly controlled.</p><p>But what happens if you unleash the hordes on it? What happens if you let anyone
+run queries against it? Well, we can tell you, now.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="what-it-is"></a>What it is<a aria-hidden="true" tabindex="-1" class="hash-link" href="#what-it-is" title="Direct link to heading">#</a></h2><p>First off, it&#x27;s a SQL-based Time Series database, built from the ground up for
+performance. It&#x27;s built to store and query very large amounts of data very
+quickly.</p><p>We deployed it on an AWS <code>c5.metal</code> server in the London, UK datacenter (sorry
+all you North Americans, there&#x27;s some built-in latency due to the laws of
+physics). It was configured with 196GB of RAM, but we were only using 40GB at
+peak usage. The <code>c5.metal</code> instance provides 2 24-core CPUs (48 cores), but we
+only used one of them (24 cores) on 23 threads. We really weren&#x27;t using anywhere
+<em>close</em> to the full potential of this AWS instance. That didn&#x27;t appear to matter
+at all.</p><p>The data is stored on an AWS EBS volume that provides SSD access to the data.
+It&#x27;s not all in memory.</p><p>The data is the entire
+<a href="https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page" target="_blank" rel="noopener noreferrer">NYC Taxi Database</a>
+plus associated weather data. It amounts to 1.6 billion records, weighing in at
+about 350GB of data. That&#x27;s a lot. And it&#x27;s too much to store in-memory. It&#x27;s
+too much to cache.</p><p>We provided some clickable queries to get people started (none of the results
+were cached or pre-calculated) but we essentially didn&#x27;t restrict the kinds of
+queries that users could run. We wanted to see, and let users see, how well this
+performed on whatever queries they threw at it.</p><p>It was not disappointing!</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="the-hackernews-post"></a>The HackerNews post<a aria-hidden="true" tabindex="-1" class="hash-link" href="#the-hackernews-post" title="Direct link to heading">#</a></h2><blockquote><p>A few weeks ago, we wrote about how we implemented SIMD instructions to
+aggregate a billion rows in milliseconds [1] thanks in great part to Agner
+Fog’s VCL library [2]. Although the initial scope was limited to table-wide
+aggregates into a unique scalar value, this was a first step towards very
+promising results on more complex aggregations. With the latest release of
+QuestDB, we are extending this level of performance to key-based aggregations.</p><p>To do this, we implemented Google’s fast hash table aka “Swisstable” [3] which
+can be found in the Abseil library [4]. In all modesty, we also found room to
+slightly accelerate it for our use case. Our version of Swisstable is dubbed
+“rosti”, after the traditional Swiss dish [5]. There were also a number of
+improvements thanks to techniques suggested by the community such as prefetch
+(which interestingly turned out to have no effect in the map code itself) [6].
+Besides C++, we used our very own queue system written in Java to parallelise
+the execution [7].</p><p>The results are remarkable: millisecond latency on keyed aggregations that
+span over billions of rows.</p><p>We thought it could be a good occasion to show our progress by making this
+latest release available to try online with a pre-loaded dataset. It runs on
+an AWS instance using 23 threads. The data is stored on disk and includes a
+1.6billion row NYC taxi dataset, 10 years of weather data with around
+30-minute resolution and weekly gas prices over the last decade. The instance
+is located in London, so folks outside of Europe may experience different
+network latencies. The server-side time is reported as “Execute”.</p><p>We provide sample queries to get started, but you are encouraged to modify
+them. However, please be aware that not every type of query is fast yet. Some
+are still running under an old single-threaded model. If you find one of
+these, you’ll know: it will take minutes instead of milliseconds. But bear
+with us, this is just a matter of time before we make these instantaneous as
+well. Next in our crosshairs is time-bucket aggregations using the SAMPLE BY
+clause.</p><p>If you are interested in checking out how we did this, our code is available
+open-source [8]. We look forward to receiving your feedback on our work so
+far. Even better, we would love to hear more ideas to further improve
+performance. Even after decades in high performance computing, we are still
+learning something new every day.</p><p>[1][https://questdb.io/blog/2020/04/02/using-simd-to-aggregate-billions-of-rows-per-second](/blog/2020/04/02/using-simd-to-aggregate-billions-of-rows-per-second)</p></blockquote><p>[2][https://www.agner.org/optimize/vectorclass.pdf](<a href="https://www.agner.org/optimize/vectorclass.pdf" target="_blank" rel="noopener noreferrer">https://www.agner.org/optimize/vectorclass.pdf</a>)</p><p>[3][https://www.youtube.com/watch?v=nchmeumjzf4](<a href="https://www.youtube.com/watch?v=ncHmEUmJZf4" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=ncHmEUmJZf4</a>)</p><p>[4][https://github.com/abseil/abseil-cpp](<a href="https://github.com/abseil/abseil-cpp" target="_blank" rel="noopener noreferrer">https://github.com/abseil/abseil-cpp</a>)</p><p>[5][https://github.com/questdb/questdb/blob/master/core/src/main](<a href="https://github.com/questdb/questdb/blob/master/core/src/main" target="_blank" rel="noopener noreferrer">https://github.com/questdb/questdb/blob/master/core/src/main</a>)...</p><p>[6][https://github.com/questdb/questdb/blob/master/core/src/main](<a href="https://github.com/questdb/questdb/blob/master/core/src/main" target="_blank" rel="noopener noreferrer">https://github.com/questdb/questdb/blob/master/core/src/main</a>)...</p><p>[7][https://questdb.io/blog/2020/03/15/interthread](/blog/2020/03/15/interthread)</p><p>[8][https://github.com/questdb/questdb](<a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer">https://github.com/questdb/questdb</a>)</p><p>And then we posted the link to the live database.</p><p>And sat back.</p><p>And watched the incoming traffic.</p><p>And tried not to panic.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="what-happened"></a>What happened<a aria-hidden="true" tabindex="-1" class="hash-link" href="#what-happened" title="Direct link to heading">#</a></h2><p>First off, we made the front page of Hacker News. Then we stayed there. For
+hours.</p><p>We saw a lot of traffic. I mean a lot of traffic. Somewhere over 20,000 unique
+IP addresses.</p><p>Excluding simple show queries, we saw 17,128 SQL queries with 2,485 syntax
+errors in the queries. We sent back almost 40GB of data in response to the
+queries. The response times were phenomenal. Sub-second responses to nearly all
+of the queries.</p><p>Someone in the HN comments suggested that column stores are bad at joins, which
+led to someone coming in and trying to join the table to itself. Ordinarily,
+this would be a stunningly bad decision.</p><p>The result was ... not what they were expecting:</p><p><img alt="query results showing unholy number of results" src="/assets/images/join-4d382927a7a4051c2c2f3bd182705dad.png"></p><p>Yeah, that&#x27;s 2,671,914,914,060,072,000 rows. In 69ms (including network transfer
+time). That&#x27;s a lot of results in a very short amount of time. Definitely not
+what they were expecting.</p><p>We saw only a couple of bad actors try something cute:</p><div class="mdxCodeBlock_1XEh"><div class="codeBlockContent_1u-d"><button type="button" aria-label="Copy code to clipboard" class="copyButton_10dd">Copy</button><div tabindex="0" class="prism-code language-log codeBlock_3iAC"><div class="codeBlockLines_b7E3" style="color:#f8f8f2;background-color:#262833"><div class="token-line" style="color:#f8f8f2"><span class="token plain">2020-06-23T20:59:02.958813Z I i.q.c.h.p.JsonQueryProcessorState [8536] exec [q=&#x27;drop table trips&#x27;] 2020-06-24T02:56:55.782072Z I i.q.c.h.p.JsonQueryProcessorState [6318] exec [q=&#x27;drop *&#x27;]</span></div></div></div></div></div><p>But those didn&#x27;t work. We may be crazy, but we&#x27;re not naive.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="what-we-learned"></a>What we learned<a aria-hidden="true" tabindex="-1" class="hash-link" href="#what-we-learned" title="Direct link to heading">#</a></h2><p>It turns out that when you do something like this, you learn a lot. You learn
+about your strengths and your weaknesses. And you learn about what users want to
+do with your product as well as what they will do to try to break it.</p><p>Joining the table to itself was one such lesson. But we also saw a lot of folks
+use a <code>where</code> clause, which caused fairly slow results. We were not entirely
+surprised by this result, as we are aware that we have not done the
+optimizations on that path to yield the fast results we want. But it was a great
+insight into how often it is used, and how people use it.</p><p>We saw a number of people use the <code>group by</code> clause as well, and then be
+surprised that it didn&#x27;t work. We probably should have warned people about that.
+In short, <code>group by</code> is automatically inferred, so it&#x27;s not needed. But since
+it&#x27;s not implemented at all, it causes an error. So we&#x27;re looking at ways to
+handle that.</p><p>We are taking all these lessons to heart, and making plans to address everything
+we saw in upcoming releases.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="conclusions"></a>Conclusions<a aria-hidden="true" tabindex="-1" class="hash-link" href="#conclusions" title="Direct link to heading">#</a></h2><p>It seems that the vast majority of the people that tried the demo were very
+impressed with it. The speed is truly breathtaking.</p><p>Here are just a few of the comments we got in the thread:</p><blockquote><p>I abused LEFT JOIN to create a query that produces 224,964,999,650,251 rows.
+Only 3.68ms execution time, now that&#x27;s impressive!</p></blockquote><blockquote><p>Very cool. Major props for putting this out there and accepting arbitrary
+queries.</p></blockquote><blockquote><p>Very impressive, i think building your own (performant) database from scratch
+is one of the most impressive software engineering feats.</p></blockquote><blockquote><p>Very cool and impressive!! Is full PostreSQL wire compatibility on the
+roadmap? I like postgres compatibility :)</p></blockquote><p>(Yes, full Postgres wire protocol is on the roadmap!)</p><blockquote><p>Mind blowing, did not know about questDB. The back button seems broken on
+chrome mobile</p></blockquote><p>Yes, the demo did break the Back button on your browser. There&#x27;s an actual
+reason for that, but it is true, for now. We&#x27;re definitely addressing that one
+right away.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_2cZh" id="try-it-yourself"></a>Try it yourself<a aria-hidden="true" tabindex="-1" class="hash-link" href="#try-it-yourself" title="Direct link to heading">#</a></h2><p>Want to try it yourself? You&#x27;ve read this far, you really should! got to
+<a href="http://try.questdb.io:9000/" target="_blank" rel="noopener noreferrer">http://try.questdb.io:9000/</a> to give it a whirl.</p><p>We&#x27;d love to have you join us on our <a href="https://slack.https://fsharechat.github.io/" target="_blank" rel="noopener noreferrer">community Slack</a> channel,
+give us a <a href="https://github.com/questdb/questdb" target="_blank" rel="noopener noreferrer">star</a> on GitHub, and
+<a href="/getstarted">download</a> and try it yourself!</p></section><footer class="row margin-vert--lg"><div class="col"><strong>Tags:</strong><a class="margin-horiz--sm" href="/blog/tags/hackernews">hackernews</a><a class="margin-horiz--sm" href="/blog/tags/postmorterm">postmorterm</a></div></footer></article><div></div><div class="margin-vert--xl"><nav class="pagination-nav" aria-label="Blog post page navigation"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/blog/2020/07/22/influxdb-lp-on-tcp"><div class="pagination-nav__sublabel">Newer Post</div><div class="pagination-nav__label">« InfluxDB line protocol on QuestDB</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/blog/2020/06/15/python-questdb-tutorial"><div class="pagination-nav__sublabel">Older Post</div><div class="pagination-nav__label">Querying data in a Jupyter Notebook »</div></a></div></nav></div></div><div class="col col--2"><div class="tableOfContents_3SO_"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#the-idea" class="table-of-contents__link">The idea</a></li><li><a href="#what-it-is" class="table-of-contents__link">What it is</a></li><li><a href="#the-hackernews-post" class="table-of-contents__link">The HackerNews post</a></li><li><a href="#what-happened" class="table-of-contents__link">What happened</a></li><li><a href="#what-we-learned" class="table-of-contents__link">What we learned</a></li><li><a href="#conclusions" class="table-of-contents__link">Conclusions</a></li><li><a href="#try-it-yourself" class="table-of-contents__link">Try it yourself</a></li></ul></div></div></div></div></div><footer class="footer_mib0 section_3Kiu"><div class="footer__inner_z0Le section--inner_2xOo"><div class="footer__column_3Npq footer__column--left_1EuR"><img alt="QuestDB logo" class="footer__logo_29Wo" src="/img/footer/questdb.svg" title="QuestDB - Fastest open source database for time series and analytics"><p class="footer__tagline_2F15">QuestDB is the fastest open source time series database</p><a class="footer__github_8UHO button_Ni2_ button--icon_3YKU button--secondary_1x2U button--xsmall_3jz_" href="https://github.com/questdb/questdb" rel="noopener noreferrer" target="_blank"><img alt="GitHub logo" height="22" src="/img/github.svg" title="GitHub" width="22">Star us on GitHub</a></div><div class="footer__column_3Npq footer__column--right_1XPX"><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">QuestDB</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/docs/introduction/">Documentation</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://github.com/questdb/questdb/projects/3" rel="noopener noreferrer" target="_blank">Roadmap</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/careers/">Careers</a></li></ul></div><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">Community</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://slack.https://fsharechat.github.io/" rel="noopener noreferrer" target="_blank">Slack</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://twitter.com/questdb" rel="noopener noreferrer" target="_blank">Twitter</a></li></ul></div><div class="footer__links_3WB8"><ul class="footer__items_3gGI"><li class="footer__title_1y7h">More</li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="/blog/">Blog</a></li><li class="footer__item_1JzF"><a class="footer__link_2PDg" href="https://github.com/questdb/questdb" rel="noopener noreferrer" target="_blank">GitHub</a></li></ul></div></div></div><div class="footer__bottom_2RpL"><p class="footer__copyright_1o2i">Copyright © 2020 QuestDB</p></div></footer></div>
+<script src="/styles.c1a63971.js" defer="defer"></script>
+<script src="/main.6f3bf291.js" defer="defer"></script>
+<script src="/common.3d2125a2.js" defer="defer"></script>
+<script src="/ccc49370.e8c9b56c.js" defer="defer"></script>
+<script src="/3b0ef48c.e829eed4.js" defer="defer"></script>
+</body>
+</html>
