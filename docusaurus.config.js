@@ -54,8 +54,8 @@ const config = {
   url: `https://${customFields.domain}`,
   baseUrl: "/",
   favicon: "/img/favicon.png",
-  organizationName: "FshareChat",
-  projectName: "fshareIM",
+  organizationName: "fsharechat",
+  projectName: "fsharechat.io",
   customFields,
   plugins: [
     require.resolve("./plugins/fetch-release"),
