@@ -66,7 +66,7 @@ const Footer = () => {
           <img
             alt="QuestDB logo"
             className={footerStyles.footer__logo}
-            src="/img/footer/questdb.svg"
+            src="/img/footer/fsharechat.svg"
             title="飞享IM 做技术自主可控的即时通讯IM"
           />
           <p className={footerStyles.footer__tagline}>{siteConfig.tagline}</p>

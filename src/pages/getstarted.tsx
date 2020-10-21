@@ -14,7 +14,7 @@ import { MetadataContextProvider } from "@theme/useMetadataContext"
 import Console from "../../static/img/pages/getStarted/fsharechat.png"
 import { getAssets, getOs, Os, Release } from "../utils"
 import binaryStyles from "../css/binary.module.css"
-import instructionStyles from "../css/instruction.module.css"
+// import instructionStyles from "../css/instruction.module.css"
 import sectionStyles from "../css/section.module.css"
 import getStartedStyles from "../css/getStarted.module.css"
 
@@ -408,7 +408,7 @@ helm install questdb/questdb --version ${siteConfig.customFields.helmVersion}`}
           </Binary> */}
         </div>
 
-        <div className={instructionStyles.instructions}>
+        {/* <div className={instructionStyles.instructions}>
           <img
             alt="SQL statement in a code editor with an artistic view of the query result shown as a chart and a table"
             className={instructionStyles.instructions__illustration}
@@ -450,7 +450,7 @@ helm install questdb/questdb --version ${siteConfig.customFields.helmVersion}`}
               for information on the latest release.
             </p>
           </div>
-        </div>
+        </div> */}
       </Layout>
     </MetadataContextProvider>
   )
