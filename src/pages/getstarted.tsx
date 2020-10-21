@@ -11,7 +11,7 @@ import IdealImage from "@theme/Image"
 import Layout from "@theme/Layout"
 import { MetadataContextProvider } from "@theme/useMetadataContext"
 
-import Console from "../../static/img/pages/getStarted/console.png"
+import Console from "../../static/img/pages/getStarted/fsharechat.png"
 import { getAssets, getOs, Os, Release } from "../utils"
 import binaryStyles from "../css/binary.module.css"
 import instructionStyles from "../css/instruction.module.css"
