@@ -6,6 +6,9 @@ category: IM
 ---
 
 
+
+## 概述
+
 在部署之前,有必要对部署目录`boot`做一些说明
 ```shell
 ├── download #android客户端 Apk
@@ -55,7 +58,7 @@ __NOTE:__ 如果是ubuntu系统,请将这里改为#!/bin/bash
 **NOTE:** 上面指定了`JAVA_HOME` 目录在`/data/jdk`.当然你可以把jdk防止在任意位置,只要指定其具体位置就可以,或者你也可以修改脚本,只需要配置java环境变量即可.一切都是为了配置基础的运行环境,如果你熟悉java环境,你可以随时配置
 
 
-# 部署说明
+## 部署说明
 
 ## 前置安装说明
 
@@ -106,11 +109,11 @@ yum install nc
 
 
 
-# 参数配置
+## 参数配置
 
 目前仅有两个服务启动既可运行,参数配置仅需关心,各个目录下config即可,你需要配置下面的文件即可,具体在每个服务的`config`目录下
 
-## push-connector
+### push-connector
 
 ```yaml
 # wss ssl 配置,这里配置jks需要指定其绝对路径地址,不启用wss 请将这里设置为空,即表示不启用wss,使用ws.本地部署可以考虑暂时不启用wss
@@ -136,7 +139,7 @@ minio.secret_key=
 
 ```
 
-## push-group
+### push-group
 
 ```yaml
 
@@ -168,9 +171,11 @@ im.password=123456
 
 ```
 
-## jvm.ini 参数配置
+### jvm.ini 参数配置
 
-**NOTE:** 由于我的线上服务器使用的内存比较小,所以对`push-connector`,`push-group`的jvm参数做了调整.所以以下内存参数配置,可以根据自己实际机器的配置修改
+:::note
+由于我的线上服务器使用的内存比较小,所以对`push-connector`,`push-group`的jvm参数做了调整.所以以下内存参数配置,可以根据自己实际机器的配置修改
+:::
 
 ```shell
 -Xmx300m  最大使用内存
@@ -178,16 +183,16 @@ im.password=123456
 -Xmn100m  新生代内存
 ```
 
-# 启动服务
+## 启动服务
 
 ```shell
 ./push-group/push-group start
 ./push-connector/push-connector start
 ```
 
-# 客户端
+## 客户端
 
-## vue 客户端配置
+### vue 客户端配置
 * 配置文件 `vue-chat\src\constant\index.js`
 
 ```java
@@ -210,7 +215,7 @@ im.password=123456
 npm run build
 ```
 
-## android 客户端
+### android 客户端
 
 * 配置文件在chat工程下的`config.java`
 

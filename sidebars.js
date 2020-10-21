@@ -42,6 +42,17 @@ module.exports = {
       ],
     },
     {
+      label: "安装准备",
+      type: "category",
+      collapsed: false,
+      items: [
+        "prepare/mysql",
+        "prepare/minio",
+        "prepare/cert",
+        "prepare/nginx"
+      ],
+    },
+    {
       label: "安装指南",
       type: "category",
       collapsed: false,

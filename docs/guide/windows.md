@@ -7,16 +7,16 @@ category: IM
 
 主要说明在windows部署步骤
 
-# 基础环境
+## 基础环境
 基础环境同centos.主要包括`zookeeper`,`mysql5.7`,`minio`,`JDK1.8`
 
 **NOTE:** 在运行之前请确保`zookeeper`,`mysql`已经部署成功. `minio`是对象存储服务器,在发送图片,文件类型类型消息时需要使用.在运行之前请检查是否安装`Jdk`
 
-# 安装包
+## 安装包
 下载如下安装包,解压文件到任意目录即可
 * [飞享windows安装包](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-windows-pro.tar.gz)
 
-# 配置
+## 配置
 解压成功后,会看到`boot`如下目录
 
 ```shell
@@ -55,7 +55,7 @@ boot
 
 ```
 
-## push-connector配置
+### push-connector配置
 
 > 修改`push-connector\config\application.properties`
 
@@ -81,7 +81,7 @@ minio.access_key=
 minio.secret_key=
 ```
 
-## push-group配置
+### push-group配置
 
 > 修改`push-group\config\application.properties`
 
@@ -117,9 +117,11 @@ im.password=123456
 
 ```
 
-# 启动服务
+## 启动服务
 
-**NOTE:** 启动服务请到各自服务目录下启动bat脚本
+:::note
+启动服务请到各自服务目录下启动bat脚本
+:::
 
 * 启动`push-group`服务,到`data\push-group`目录下执行`push-group.bat`
 

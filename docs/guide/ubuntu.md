@@ -7,14 +7,14 @@ category: IM
 
 此文档主要说明在ubuntu单击部署飞享的基本步骤与注意事项,重点说明可能出错的地方与解决方案
 
-# Nginx 安装
+## Nginx 安装
 
-## 1. apt安装
+### 1. apt安装
 ```shell
 sudo apt install nginx
 ```
 
-## 2. 文件位置
+### 2. 文件位置
 ```shell
 /usr/sbin/nginx    :主程序
 /etc/nginx         :配置文件
@@ -22,14 +22,14 @@ sudo apt install nginx
 /var/log/nginx     :存放日志
 ```
 
-## 3. 启动nginx
+### 3. 启动nginx
 
 ```shell
 service nginx start # 启动nginx
 service nginx reload # 重新加载nginx配置文件
 ```
 
-## 4. nginx命令
+### 4. nginx命令
 
 ```shell
 nginx -s reopen # 重启nginx
@@ -37,9 +37,9 @@ nginx -s stop # 停止nginx
 nginx -v # 查看版本号
 ```
 
-# Minio安装
+## Minio安装
 
-## 本地化安装
+### 本地化安装
 
 ```
 wget http://dl.minio.org.cn/server/minio/release/linux-amd64/minio
@@ -54,13 +54,15 @@ MINIO_ACCESS_KEY=test MINIO_SECRET_KEY=test123456 nohup ./minio  server  minioda
 MINIO_ACCESS_KEY=test MINIO_SECRET_KEY=test nohup ./minio  server --address ":443" /data/miniodata/  > /data/minio.log 2>&1 &
 ```
 
-# IM 服务安装
+## IM 服务安装
 
 **NOTE:** 参见[服务安装说明](https://github.com/fsharechat/chat-server-release)
 
 ## base脚本启动问题
 
-**NOTE:** 注意修改声明`#!/bin/sh`
+:::note
+注意修改声明`#!/bin/sh`
+:::
 
 ## JKS 配置
 
@@ -82,9 +84,11 @@ Line       : 21
 
 ```
 
-**NOTE:** 需要5.6.5之后版本才支持
+:::note
+需要5.6.5之后版本才支持
+:::
 
-# Nginx 服务配置
+## Nginx 服务配置
 
 ```properties
 user www-data;
