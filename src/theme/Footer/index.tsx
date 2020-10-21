@@ -67,7 +67,7 @@ const Footer = () => {
             alt="QuestDB logo"
             className={footerStyles.footer__logo}
             src="/img/footer/questdb.svg"
-            title="QuestDB - Fastest open source database for time series and analytics"
+            title="飞享IM 做技术自主可控的即时通讯IM"
           />
           <p className={footerStyles.footer__tagline}>{siteConfig.tagline}</p>
 

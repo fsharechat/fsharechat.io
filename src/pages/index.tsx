@@ -10,8 +10,8 @@ import Button from "@theme/Button"
 import { MetadataContextProvider } from "@theme/useMetadataContext"
 // import useWindowWidth from "@theme/useWindowWidth"
 
-import cardsStyles from "../css/cards.module.css"
-import consoleStyles from "../css/console.module.css"
+// import cardsStyles from "../css/cards.module.css"
+// import consoleStyles from "../css/console.module.css"
 import featureStyles from "../css/feature.module.css"
 import jumbotronStyles from "../css/jumbotron.module.css"
 // import queryScrollerStyles from "../css/queryScroller.module.css"
@@ -272,169 +272,169 @@ const Feature = () => (
   </section>
 )
 
-const Cards = () => (
-  <section
-    className={clsx(
-      sectionStyles.section,
-      sectionStyles["section--inner"],
-      cardsStyles.cards,
-    )}
-  >
-    <h3
-      className={clsx(
-        sectionStyles.section__title,
-        cardsStyles.cards__title,
-        "text--center",
-      )}
-    >
-      Why time series?
-    </h3>
+// const Cards = () => (
+//   <section
+//     className={clsx(
+//       sectionStyles.section,
+//       sectionStyles["section--inner"],
+//       cardsStyles.cards,
+//     )}
+//   >
+//     <h3
+//       className={clsx(
+//         sectionStyles.section__title,
+//         cardsStyles.cards__title,
+//         "text--center",
+//       )}
+//     >
+//       Why time series?
+//     </h3>
 
-    <div className={cardsStyles.cards__footer}>
-      <div className={cardsStyles.cards__wrapper}>
-        <h3 className={cardsStyles.cards__header}>DevOps monitoring</h3>
-        <p className={cardsStyles.cards__content}>
-          Collect metrics and events from your infrastructure (CPU, memory,
-          networks, etc) and get real-time visibility into your entire stack.
-        </p>
-      </div>
+//     <div className={cardsStyles.cards__footer}>
+//       <div className={cardsStyles.cards__wrapper}>
+//         <h3 className={cardsStyles.cards__header}>DevOps monitoring</h3>
+//         <p className={cardsStyles.cards__content}>
+//           Collect metrics and events from your infrastructure (CPU, memory,
+//           networks, etc) and get real-time visibility into your entire stack.
+//         </p>
+//       </div>
 
-      <div className={cardsStyles.cards__wrapper}>
-        <h3 className={cardsStyles.cards__header}>Financial market data</h3>
-        <p className={cardsStyles.cards__content}>
-          Store market data to identify historical trends and correlations using
-          statistical methods and generate trading signals.
-        </p>
-      </div>
+//       <div className={cardsStyles.cards__wrapper}>
+//         <h3 className={cardsStyles.cards__header}>Financial market data</h3>
+//         <p className={cardsStyles.cards__content}>
+//           Store market data to identify historical trends and correlations using
+//           statistical methods and generate trading signals.
+//         </p>
+//       </div>
 
-      <div className={cardsStyles.cards__wrapper}>
-        <h3 className={cardsStyles.cards__header}>Connected devices</h3>
-        <p className={cardsStyles.cards__content}>
-          Capture, store and respond to data from sensors at any resolution in
-          industrial applications.
-        </p>
-      </div>
+//       <div className={cardsStyles.cards__wrapper}>
+//         <h3 className={cardsStyles.cards__header}>Connected devices</h3>
+//         <p className={cardsStyles.cards__content}>
+//           Capture, store and respond to data from sensors at any resolution in
+//           industrial applications.
+//         </p>
+//       </div>
 
-      <div className={cardsStyles.cards__wrapper}>
-        <h3 className={cardsStyles.cards__header}>Application metrics</h3>
-        <p className={cardsStyles.cards__content}>
-          Empower users of your application to track and visualise logs, api
-          calls and any application activity in real-time.
-        </p>
-      </div>
+//       <div className={cardsStyles.cards__wrapper}>
+//         <h3 className={cardsStyles.cards__header}>Application metrics</h3>
+//         <p className={cardsStyles.cards__content}>
+//           Empower users of your application to track and visualise logs, api
+//           calls and any application activity in real-time.
+//         </p>
+//       </div>
 
-      <div className={cardsStyles.cards__wrapper}>
-        <h3 className={cardsStyles.cards__header}>CRUD for time series</h3>
-        <p className={cardsStyles.cards__content}>
-          Allows easy changes in historical data through fully ACID support for
-          CRUD APIs.
-        </p>
-      </div>
+//       <div className={cardsStyles.cards__wrapper}>
+//         <h3 className={cardsStyles.cards__header}>CRUD for time series</h3>
+//         <p className={cardsStyles.cards__content}>
+//           Allows easy changes in historical data through fully ACID support for
+//           CRUD APIs.
+//         </p>
+//       </div>
 
-      <div className={cardsStyles.cards__wrapper}>
-        <h3 className={cardsStyles.cards__header}>Integrated data</h3>
-        <p className={cardsStyles.cards__content}>
-          Pull together all your application, device, and infrastructure data
-          for a complete, 360º view of all aspects of your business.
-        </p>
-      </div>
-    </div>
-  </section>
-)
+//       <div className={cardsStyles.cards__wrapper}>
+//         <h3 className={cardsStyles.cards__header}>Integrated data</h3>
+//         <p className={cardsStyles.cards__content}>
+//           Pull together all your application, device, and infrastructure data
+//           for a complete, 360º view of all aspects of your business.
+//         </p>
+//       </div>
+//     </div>
+//   </section>
+// )
 
-const Console = () => {
-  const { siteConfig } = useDocusaurusContext()
+// const Console = () => {
+//   const { siteConfig } = useDocusaurusContext()
 
-  return (
-    <section
-      className={clsx(sectionStyles.section, sectionStyles["section--odd"])}
-    >
-      <div
-        className={clsx(sectionStyles["section--inner"], consoleStyles.console)}
-      >
-        <h2
-          className={clsx(
-            sectionStyles.section__title,
-            consoleStyles.console__title,
-            "text--center",
-          )}
-        >
-          Interactive Console
-        </h2>
-        <p
-          className={clsx(
-            sectionStyles.section__subtitle,
-            consoleStyles.console__subtitle,
-            "text--center",
-          )}
-        >
-          Interactive console to import data (drag and drop) and start querying
-          right away. Check our&nbsp;
-          <a href="/docs/guide/web-console/">Web Console guide</a> to get
-          started.
-        </p>
+//   return (
+//     <section
+//       className={clsx(sectionStyles.section, sectionStyles["section--odd"])}
+//     >
+//       <div
+//         className={clsx(sectionStyles["section--inner"], consoleStyles.console)}
+//       >
+//         <h2
+//           className={clsx(
+//             sectionStyles.section__title,
+//             consoleStyles.console__title,
+//             "text--center",
+//           )}
+//         >
+//           Interactive Console
+//         </h2>
+//         <p
+//           className={clsx(
+//             sectionStyles.section__subtitle,
+//             consoleStyles.console__subtitle,
+//             "text--center",
+//           )}
+//         >
+//           Interactive console to import data (drag and drop) and start querying
+//           right away. Check our&nbsp;
+//           <a href="/docs/guide/web-console/">Web Console guide</a> to get
+//           started.
+//         </p>
 
-        <img
-          alt="Artistic view of QuestDB's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
-          className={consoleStyles.console__illustration}
-          src="/img/pages/index/console.svg"
-        />
+//         <img
+//           alt="Artistic view of QuestDB's Web Console split in 3 components: the navigation tree, the SQL code editor and data displayed as a chart"
+//           className={consoleStyles.console__illustration}
+//           src="/img/pages/index/console.svg"
+//         />
 
-        <div className={consoleStyles.console__footer}>
-          <div
-            className={clsx(
-              consoleStyles.console__highlight,
-              consoleStyles["console__highlight--primary"],
-            )}
-          >
-            <img
-              alt="Postgres logo"
-              src="/img/pages/index/pgwire.svg"
-              title="Postgres"
-            />
-            <h3 className={consoleStyles.console__label}>
-              Postgres wire support
-            </h3>
-            <p className={consoleStyles.console__summary}>
-              Interact with QuestDB using the Postgres wire and any tool that
-              connects to it.
-            </p>
-          </div>
+//         <div className={consoleStyles.console__footer}>
+//           <div
+//             className={clsx(
+//               consoleStyles.console__highlight,
+//               consoleStyles["console__highlight--primary"],
+//             )}
+//           >
+//             <img
+//               alt="Postgres logo"
+//               src="/img/pages/index/pgwire.svg"
+//               title="Postgres"
+//             />
+//             <h3 className={consoleStyles.console__label}>
+//               Postgres wire support
+//             </h3>
+//             <p className={consoleStyles.console__summary}>
+//               Interact with QuestDB using the Postgres wire and any tool that
+//               connects to it.
+//             </p>
+//           </div>
 
-          <div className={consoleStyles.console__highlight}>
-            <img
-              alt="Antenna"
-              src="/img/pages/index/foss.svg"
-              title="Open source"
-            />
-            <h3 className={consoleStyles.console__label}>Open source</h3>
-            <p className={consoleStyles.console__summary}>
-              QuestDB is open source. Follow us on GitHub. Watch the repo to get
-              notified of further releases and new features!
-            </p>
+//           <div className={consoleStyles.console__highlight}>
+//             <img
+//               alt="Antenna"
+//               src="/img/pages/index/foss.svg"
+//               title="Open source"
+//             />
+//             <h3 className={consoleStyles.console__label}>Open source</h3>
+//             <p className={consoleStyles.console__summary}>
+//               QuestDB is open source. Follow us on GitHub. Watch the repo to get
+//               notified of further releases and new features!
+//             </p>
 
-            <div className={consoleStyles.console__actions}>
-              <a
-                className={consoleStyles.console__link}
-                href={siteConfig.customFields.githubUrl}
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Go to GitHub&nbsp;&nbsp;&gt;
-              </a>
-              <a
-                className={consoleStyles.console__link}
-                href={siteConfig.customFields.slackUrl}
-              >
-                Join Slack&nbsp;&nbsp;&gt;
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+//             <div className={consoleStyles.console__actions}>
+//               <a
+//                 className={consoleStyles.console__link}
+//                 href={siteConfig.customFields.githubUrl}
+//                 rel="noopener noreferrer"
+//                 target="_blank"
+//               >
+//                 Go to GitHub&nbsp;&nbsp;&gt;
+//               </a>
+//               <a
+//                 className={consoleStyles.console__link}
+//                 href={siteConfig.customFields.slackUrl}
+//               >
+//                 Join Slack&nbsp;&nbsp;&gt;
+//               </a>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
 
 // const S = [3, 1, 6, 10]
 // const M = [3, 0, 4, 8]
@@ -698,8 +698,8 @@ const Home = () => {
         <Feature />
         {/* <QueryScroller /> */}
         <Why />
-        <Cards />
-        <Console />
+        {/* <Cards /> */}
+        {/* <Console /> */}
         {/* <SeenOn /> */}
       </Layout>
     </MetadataContextProvider>

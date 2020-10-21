@@ -6,17 +6,17 @@ const domain = "https://fsharechat.github.io/"
 
 const customFields = {
   artifactHubUrl: "https://artifacthub.io/packages/helm/questdb/questdb",
-  copyright: `Copyright © ${new Date().getFullYear()} QuestDB`,
+  copyright: `Copyright © ${new Date().getFullYear()} Fsharechat`,
   crunchbaseUrl: "https://www.crunchbase.com/organization/quest-db",
   description:
-    "QuestDB is an open source database designed to make time-series lightning fast and easy. It exposes a high performance REST API and supports Postgres wire.",
+    "飞享IM 做技术自主可控的即时通讯IM",
   dockerUrl: "https://hub.docker.com/r/questdb/questdb",
   domain,
   githubOrgUrl,
   githubUrl: `${githubOrgUrl}`,
   helmVersion: "0.2.4",
   linkedInUrl: "https://www.linkedin.com/company/comsince/",
-  oneLiner: "Fast SQL open source database for time series - QuestDB",
+  oneLiner: "飞享IM 做技术自主可控的即时通讯IM",
   slackUrl: `https://slack.${domain}`,
   twitterUrl: "https://twitter.com/comsince",
   version: "0.0.15",
@@ -49,8 +49,8 @@ function variable() {
 }
 
 const config = {
-  title: "Time series data, faster",
-  tagline: "FshareIM是一个开源的即时IM通讯系统,适于私有化部署",
+  title: "飞享IM-即时IM通讯系统 ",
+  tagline: "FshareIM是一个技术自主可控即时IM通讯系统,适于私有化部署",
   url: `https://${customFields.domain}`,
   baseUrl: "/",
   favicon: "/img/favicon.png",
@@ -201,10 +201,10 @@ const config = {
               label: "路线图",
               href: "https://github.com/orgs/fsharechat/projects/1",
             },
-            {
-              label: "其他",
-              to: "/careers/",
-            },
+            // {
+            //   label: "其他",
+            //   to: "/careers/",
+            // },
           ],
         },
         {
