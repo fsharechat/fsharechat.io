@@ -64,7 +64,7 @@ const Footer = () => {
           )}
         >
           <img
-            alt="QuestDB logo"
+            alt="FshareIM logo"
             className={footerStyles.footer__logo}
             src="/img/footer/fsharechat.svg"
             title="飞享IM 做技术自主可控的即时通讯IM"

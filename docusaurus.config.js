@@ -147,7 +147,7 @@ const config = {
     navbar: {
       title: " ",
       logo: {
-        alt: "QuestDB",
+        alt: "fsharechat",
         src: "/img/navbar/fshare.svg",
       },
       items: [

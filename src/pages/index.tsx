@@ -686,7 +686,7 @@ const Feature = () => (
 
 const Home = () => {
   const { siteConfig } = useDocusaurusContext()
-  const title = "QuestDB"
+  const title = "飞享IM"
 
   return (
     <MetadataContextProvider>
