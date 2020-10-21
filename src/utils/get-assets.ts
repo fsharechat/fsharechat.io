@@ -17,7 +17,7 @@ type Asset = {
 
 export const getAssets = (
   release: Release,
-): { bsd: Asset; linux: Asset; noJre: Asset; windows: Asset } => {
+): { bsd: Asset; linux: Asset; noJre: Asset; windows: Asset; macos: Asset } => {
   const bsdRaw = release.assets.find(({ name }) => name.indexOf("bsd") !== -1)
   const linuxRaw = release.assets.find(
     ({ name }) => name.indexOf("linux") !== -1,
@@ -28,10 +28,15 @@ export const getAssets = (
   const windowsRaw = release.assets.find(
     ({ name }) => name.indexOf("win") !== -1,
   )
+  const macosRaw = release.assets.find(
+    ({ name }) => name.indexOf("osx") !== -1,
+  )
+
   let bsd = {}
   let linux = {}
   let noJre = {}
   let windows = {}
+  let macos = {}
 
   if (bsdRaw) {
     bsd = {
@@ -61,5 +66,12 @@ export const getAssets = (
     }
   }
 
-  return { bsd, linux, noJre, windows }
+  if(macosRaw){
+     macos = {
+      href: macosRaw.browser_download_url,
+      size: `${(macosRaw.size / 1e6).toPrecision(3)} MB`,
+     }
+  }
+
+  return { bsd, linux, noJre, windows,macos }
 }

@@ -19,7 +19,7 @@ const customFields = {
   oneLiner: "Fast SQL open source database for time series - QuestDB",
   slackUrl: `https://slack.${domain}`,
   twitterUrl: "https://twitter.com/comsince",
-  version: "5.0.3",
+  version: "0.0.15",
 }
 
 function variable() {

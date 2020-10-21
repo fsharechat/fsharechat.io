@@ -5,7 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import { usePluginData } from "@docusaurus/useGlobalData"
 import React, { ReactNode, useEffect, useState } from "react"
 
-import CodeBlock from "@theme/CodeBlock"
+// import CodeBlock from "@theme/CodeBlock"
 import Button from "@theme/Button"
 import IdealImage from "@theme/Image"
 import Layout from "@theme/Layout"
@@ -102,9 +102,8 @@ Binary.defaultProps = {
 }
 
 const GetStartedPage = () => {
-  const title = "Download QuestDB"
-  const description =
-    "Download QuestDB, an open source time series SQL database for fast ingestion and queries"
+  const title = "下载飞享客户端"
+  const description = "下载飞享, 你身边的IM的通讯专家"
   const { siteConfig } = useDocusaurusContext()
   const { release } = usePluginData<{ release: Release }>("fetch-release")
   const [os, setOs] = useState<Os | undefined>()
@@ -163,8 +162,8 @@ const GetStartedPage = () => {
     ),
     macos: (
       <Binary
-        basis="15px"
-        grow={1}
+        architecture
+        href={assets.macos.href}
         logo={
           <img
             alt="macOS Logo"
@@ -172,14 +171,10 @@ const GetStartedPage = () => {
             src="/img/pages/getStarted/macos.svg"
           />
         }
-        title="macOS (via Homebrew)"
-      >
-        <div />
-        <CodeBlock className="language-shell">
-          {`brew update
-brew install questdb`}
-        </CodeBlock>
-      </Binary>
+        rt
+        size={assets.macos.size}
+        title="macOS"
+      />
     ),
     windows: (
       <Binary
@@ -229,7 +224,7 @@ brew install questdb`}
                 getStartedStyles.getStarted__title,
               )}
             >
-              Get started with QuestDB
+              开始下载体验飞享
             </h1>
 
             <p
@@ -239,11 +234,8 @@ brew install questdb`}
                 "text--center",
               )}
             >
-              You can find below download links for the latest version of
-              QuestDB ({siteConfig.customFields.version}). Once your download is
-              finished, run QuestDB and use the&nbsp;
-              <a href="/docs/guide/web-console/">Web Console guide</a> to get
-              started.
+              点击下载按钮,下载最新版本({siteConfig.customFields.version})
+              下载成功你可以使用体验帐号登录体验
             </p>
 
             <IdealImage
@@ -253,7 +245,7 @@ brew install questdb`}
                 getStartedStyles.getStarted__console,
               )}
               img={Console}
-              src="/img/pages/getStarted/console.png"
+              src="/img/pages/getStarted/fsharechat.png"
             />
 
             <div className={getStartedStyles.getStarted__cta}>
@@ -263,7 +255,7 @@ brew install questdb`}
                     os !== "macos",
                 })}
               >
-                Latest Release:&nbsp;
+                最新版本:&nbsp;
                 <span className="color--pink">
                   {siteConfig.customFields.version}
                 </span>
@@ -283,7 +275,7 @@ brew install questdb`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                View the changelog
+                查看更新日志
               </a>
               <a
                 className={getStartedStyles.getStarted__link}
@@ -291,7 +283,7 @@ brew install questdb`}
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                View previous releases
+                查看旧版本
               </a>
             </div>
           </div>
@@ -304,17 +296,17 @@ brew install questdb`}
               {os !== "linux" && perOs.linux}
               {os !== "macos" && perOs.macos}
               {os !== "windows" && perOs.windows}
-              {os !== "bsd" && perOs.bsd}
+              {/* {os !== "bsd" && perOs.bsd} */}
             </>
           ) : (
             <>
               {perOs.linux}
               {perOs.macos}
               {perOs.windows}
-              {perOs.bsd}
+              {/* {perOs.bsd} */}
             </>
           )}
-          <Binary
+          {/* <Binary
             architecture
             href={assets.noJre.href}
             logo={
@@ -413,7 +405,7 @@ helm install questdb/questdb --version ${siteConfig.customFields.helmVersion}`}
               {`implementation 'org.questdb:questdb:${siteConfig.customFields.version}'`}
             </CodeBlock>
             <div style={{ height: "2.75rem" }} />
-          </Binary>
+          </Binary> */}
         </div>
 
         <div className={instructionStyles.instructions}>

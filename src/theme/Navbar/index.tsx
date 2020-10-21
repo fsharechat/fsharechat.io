@@ -115,7 +115,7 @@ function Navbar(): JSX.Element {
             isSearchBarExpanded={isSearchBarExpanded}
           />
           <Button className={styles.getStarted} size="xsmall" to="/getstarted/">
-            Get Started
+            客户端下载
           </Button>
         </div>
       </div>
