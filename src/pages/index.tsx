@@ -188,7 +188,7 @@ const Jumbotron = () => {
           </Button>
         </div>
         <p className={jumbotronStyles.jumbotron__description}>
-          FShareIM是基于Java技术栈的即时通讯IM,技术自主可控,适合快速私有化部署
+          演示帐号:13800000000 验证码: 556677
         </p>
       </div>
 
