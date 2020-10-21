@@ -16,7 +16,7 @@ import featureStyles from "../css/feature.module.css"
 import jumbotronStyles from "../css/jumbotron.module.css"
 // import queryScrollerStyles from "../css/queryScroller.module.css"
 import sectionStyles from "../css/section.module.css"
-import seenOnStyles from "../css/seenOn.module.css"
+// import seenOnStyles from "../css/seenOn.module.css"
 import whyStyles from "../css/why.module.css"
 
 const Why = () => {
@@ -119,29 +119,29 @@ const Why = () => {
   )
 }
 
-const SeenOn = () => (
-  <section
-    className={clsx(
-      sectionStyles.section,
-      sectionStyles["section--inner"],
-      seenOnStyles.section,
-    )}
-  >
-    <a
-      className={seenOnStyles["product-hunt"]}
-      href="https://www.producthunt.com/posts/questdb?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-questdb"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      <img
-        src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=224674&theme=dark&period=daily"
-        alt="QuestDB - Fastest open source database for time-series and analytics | Product Hunt Embed"
-        width="250px"
-        height="54px"
-      />
-    </a>
-  </section>
-)
+// const SeenOn = () => (
+//   <section
+//     className={clsx(
+//       sectionStyles.section,
+//       sectionStyles["section--inner"],
+//       seenOnStyles.section,
+//     )}
+//   >
+//     <a
+//       className={seenOnStyles["product-hunt"]}
+//       href="https://www.producthunt.com/posts/questdb?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-questdb"
+//       rel="noopener noreferrer"
+//       target="_blank"
+//     >
+//       <img
+//         src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=224674&theme=dark&period=daily"
+//         alt="QuestDB - Fastest open source database for time-series and analytics | Product Hunt Embed"
+//         width="250px"
+//         height="54px"
+//       />
+//     </a>
+//   </section>
+// )
 
 const Jumbotron = () => {
   const { siteConfig } = useDocusaurusContext()
@@ -700,7 +700,7 @@ const Home = () => {
         <Why />
         <Cards />
         <Console />
-        <SeenOn />
+        {/* <SeenOn /> */}
       </Layout>
     </MetadataContextProvider>
   )
