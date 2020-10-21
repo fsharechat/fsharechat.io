@@ -60,7 +60,7 @@ linux的基本技能，主要说明linux环境下c编程，shell；着重于基�
 C没有像gradle和maven的编译工具，需要使用makefile来组织编译，不过以后可以使用CMake
 
 * [GNU make](https://www.gnu.org/software/make/manual/make.html)
-* [GNU Make 译文](/download/gun_make.pdf)
+* [GNU Make 译文](https://www.comsince.cn/static/download/gun_make.pdf)
 * [跟我一起写Makefile](http://wiki.ubuntu.org.cn/%E8%B7%9F%E6%88%91%E4%B8%80%E8%B5%B7%E5%86%99Makefile)
 
 ### CMake
@@ -141,7 +141,7 @@ Your APP_BUILD_SCRIPT points to an unknown file: ./main/cpp/jni/Android.mk
 ### Java I/O
 
 * [Java IO](http://ifeve.com/java-io/)
-* [java I/O书籍](/download/JavaIO.pdf)
+* [java I/O书籍](https://www.comsince.cn/static/download/JavaIO.pdf)
 * [Java NIO Tutorial](http://tutorials.jenkov.com/java-nio/index.html)
 * [java nio解决半包 粘包问题](https://blog.csdn.net/nongfuyumin/article/details/78343999)
 
@@ -153,9 +153,9 @@ Your APP_BUILD_SCRIPT points to an unknown file: ./main/cpp/jni/Android.mk
 
 ### Java Connurency
 
-* [Java并发编程实战](/download/Java-concurency-in-practice.pdf)
+* [Java并发编程实战](https://www.comsince.cn/static/download/Java-concurency-in-practice.pdf)
 * [通俗解释java并发原理教程](http://tutorials.jenkov.com/java-concurrency/thread-signaling.html)
-* [Java 并发编程的艺术](/download/Java_concurrency_artifact.pdf)
+* [Java 并发编程的艺术](https://www.comsince.cn/static/download/Java_concurrency_artifact.pdf)
 
 ### Java Reflection
   
@@ -167,11 +167,11 @@ AOP模式实现切面编程中，利用职责链模式，建立一种拦截器�
 ### Java web
 
 * [Servelet规范](http://zhanjindong.com/assets/pdf/Servlet3.1-Specification.pdf)
-* [Servelet规范-本地版](/download/Servlet3.1-Specification.pdf)
+* [Servelet规范-本地版](https://www.comsince.cn/static/download/Servlet3.1-Specification.pdf)
 
 #### Spring 框架原理
 
-* [深入解析Spring 内幕](/download/spring-tech-invoke_anayisis.pdf)
+* [深入解析Spring 内幕](https://www.comsince.cn/static/download/spring-tech-invoke_anayisis.pdf)
 * [Spring的BeanFactoryPostProcessor和BeanPostProcessor](https://blog.csdn.net/caihaijiang/article/details/35552859)
 * [Spring AOP aspect vs advisor 以及基于xml和annotation的两种配置](https://howtodoinjava.com/spring-aop/spring-aop-aspectj-xml-configuration-example/)
 * [aop:aspect与aop:advisor的区别](https://blog.csdn.net/u011983531/article/details/70504281)
@@ -216,7 +216,7 @@ AOP模式实现切面编程中，利用职责链模式，建立一种拦截器�
 
 #### 权限框架
 
-* [跟我学Shiro](/download/kaitao-shiro.pdf
+* [跟我学Shiro](https://www.comsince.cn/static/download/kaitao-shiro.pdf
 
 ### 设计模式
 
@@ -293,7 +293,7 @@ AOP模式实现切面编程中，利用职责链模式，建立一种拦截器�
 
 ### 书籍
 
-* [亿级流量网站架构核心技术 跟开涛学搭建高可用高并发系统](/download/kaitao-distribute-system.pdf)
+* [亿级流量网站架构核心技术 跟开涛学搭建高可用高并发系统](https://www.comsince.cn/static/download/kaitao-distribute-system.pdf)
 
 ## 大数据
 
@@ -318,10 +318,10 @@ AOP模式实现切面编程中，利用职责链模式，建立一种拦截器�
 
 #### 书籍资料
 * [Hadoop实战-陆嘉恒](https://www.comsince.cn)
-* [Hadoop权威指南-第三版](/download/largfile-100M/Hadoop-overall.pdf)
-* [Hadoop技术内幕：深入解析Hadoop Common和HDFS](/download/bigdata/Hadoop_Common_HDFS.pdf)
-* [Hadoop技术内幕：深入解析YARN架构设计与实现原理](/download/bigdata/Hadoop_YARN_artitect.pdf)
-* [Hadoop技术内幕：深入解析MapReduce架构设计与实现原理 (大数据技术丛书)](/download/bigdata/Hadoop_MapReduce_artitect.pdf)
+* [Hadoop权威指南-第三版](https://www.comsince.cn/static/download/largfile-100M/Hadoop-overall.pdf)
+* [Hadoop技术内幕：深入解析Hadoop Common和HDFS](https://www.comsince.cn/static/download/bigdata/Hadoop_Common_HDFS.pdf)
+* [Hadoop技术内幕：深入解析YARN架构设计与实现原理](https://www.comsince.cn/static/download/bigdata/Hadoop_YARN_artitect.pdf)
+* [Hadoop技术内幕：深入解析MapReduce架构设计与实现原理 (大数据技术丛书)](https://www.comsince.cn/static/download/bigdata/Hadoop_MapReduce_artitect.pdf)
 
 ### Python
 * [Python教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431608990315a01b575e2ab041168ff0df194698afac000)
