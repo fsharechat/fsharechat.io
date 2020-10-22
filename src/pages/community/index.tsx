@@ -12,8 +12,7 @@ import sectionStyles from "../../css/section.module.css"
 
 const CareersPage = () => {
   const title = "社区"
-  const description =
-    "加入飞享社区,尽享IM资讯"
+  const description = "加入飞享社区,尽享IM资讯"
   const { siteConfig } = useDocusaurusContext()
   // const titleRef = useRef<HTMLHeadingElement | null>(null)
   // const handleClick = useCallback(() => {
