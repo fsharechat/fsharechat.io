@@ -61,6 +61,13 @@ module.exports = {
         "guide/ubuntu",
         "guide/windows",
       ],
-    },  
+    },{
+      label: "开放接口",
+      type: "category",
+      collapsed: false,
+      items: [
+        "api/pushapi",
+      ],
+    }  
   ].filter(Boolean),
 }

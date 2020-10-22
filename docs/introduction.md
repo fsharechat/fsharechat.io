@@ -4,7 +4,7 @@ description:
   说明飞享即时通讯IM基本概述
 ---
 
-为了便于项目的管理与发展,将项目相关的仓库全部移动到这里[Github飞享开发组](https://github.com/fsharechat),[gitee](https://gitee.com/comsince)的个人账户下面的项目,原则上全部移动到这里维护
+为了便于项目的管理与发展,将项目相关的仓库全部移动到这里[Github飞享开发组](https://github.com/fsharechat),[Gitee](https://gitee.com/comsince)的个人账户下面的项目,原则上全部移动到这里维护
 
 ## 项目列表
 ### 服务端项目
