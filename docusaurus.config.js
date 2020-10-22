@@ -18,7 +18,7 @@ const customFields = {
   linkedInUrl: "https://www.linkedin.com/company/comsince/",
   oneLiner: "飞享IM 做技术自主可控的即时通讯IM",
   slackUrl: `https://slack.${domain}`,
-  twitterUrl: "https://twitter.com/comsince",
+  twitterUrl: "https://weibo.com/comsince",
   version: "0.0.15",
 }
 
@@ -201,10 +201,6 @@ const config = {
               label: "路线图",
               href: "https://github.com/orgs/fsharechat/projects/1",
             },
-            // {
-            //   label: "其他",
-            //   to: "/careers/",
-            // },
           ],
         },
         {
@@ -212,7 +208,11 @@ const config = {
           items: [
             {
               label: "公众号",
-              href: customFields.slackUrl,
+              to: "/community/",
+            },
+            {
+              label:"QQ群",
+              to: "/community/",
             },
             {
               label: "微博",
