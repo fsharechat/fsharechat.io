@@ -11,9 +11,9 @@ import careersStyles from "../../css/careers.module.css"
 import sectionStyles from "../../css/section.module.css"
 
 const CareersPage = () => {
-  const title = "Careers at QuestDB"
+  const title = "社区"
   const description =
-    "Join us at QuestDB to build breakthrough technology that will power the infrastructure of tomorrow."
+    "加入飞享社区,尽享IM资讯"
   const { siteConfig } = useDocusaurusContext()
   // const titleRef = useRef<HTMLHeadingElement | null>(null)
   // const handleClick = useCallback(() => {
