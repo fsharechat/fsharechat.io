@@ -73,7 +73,7 @@ const CareersPage = () => {
               <img
                 alt="A code editor containing a SQL statement"
                 className={careersStyles.card__illustration}
-                src="https://media.comsince.cn/minio-bucket-image-name/1-TWTVTVWW-1603355549961-1603355502875.png"
+                src="https://media.comsince.cn/minio-bucket-image-name/qq-group.jpg"
               />
             </div>
             <div className={careersStyles.card__side}>
