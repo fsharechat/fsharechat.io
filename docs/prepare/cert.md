@@ -111,6 +111,67 @@ certificate： /etc/letsencrypt/live/lattecloud.cc/fullchain.pem
 key：         /etc/letsencrypt/live/lattecloud.cc/privkey.pem
 ```
 
+## 申请证书
+
+:::note
+这里采用的是开源项目进行申请,避免操作dns.注意`au.sh`要填写绝对路径
+:::
+
+import Tabs from "@theme/Tabs"
+import TabItem from "@theme/TabItem"
+
+<Tabs defaultValue="cert-apply" values={[
+  { label: "cert-apply", value: "cert-apply" },
+  { label: "cert-apply-result", value: "cert-apply-result" },
+]}>
+
+<TabItem value="cert-apply">
+
+```shell
+certbot certonly  -d *.fsharechat.cn --manual --preferred-challenges dns --manual-auth-hook "/data/certbot/certbot-letencrypt-wildcardcertificates-alydns-au/au.sh python aly add" --manual-cleanup-hook "/data/certbot/certbot-letencrypt-wildcardcertificates-alydns-au/au.sh python aly clean"
+```
+
+</TabItem>
+
+<TabItem value="cert-apply-result">
+
+```shell
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Plugins selected: Authenticator manual, Installer None
+Obtaining a new certificate
+Performing the following challenges:
+dns-01 challenge for fsharechat.cn
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+NOTE: The IP of this machine will be publicly logged as having requested this
+certificate. If you're running certbot in manual mode on a machine that is not
+your server, please ensure you're okay with that.
+
+Are you OK with your IP being logged?
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(Y)es/(N)o: y
+Waiting for verification...
+Cleaning up challenges
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/fsharechat.cn/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/fsharechat.cn/privkey.pem
+   Your cert will expire on 2021-01-21. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+```
+
+</TabItem>
+
+</Tabs>
+
 ## 域名续期
 
 ### 校验续期
@@ -125,9 +186,6 @@ certbot-auto renew
 :::
 
 ### Dry-Run
-
-import Tabs from "@theme/Tabs"
-import TabItem from "@theme/TabItem"
 
 <Tabs defaultValue="dry-run" values={[
   { label: "dry-run", value: "dry-run" },
