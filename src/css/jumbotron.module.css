@@ -54,6 +54,7 @@
   flex: 1 1 auto;
   background-image: url("https://media.comsince.cn/minio-bucket-image-name/fshare-banner.png");
   background-repeat: no-repeat;
+  background-size: contain;
   /* background-position-x: right; */
 }
 
