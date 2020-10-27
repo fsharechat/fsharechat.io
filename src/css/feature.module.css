@@ -7,6 +7,7 @@
 .feature__illustration {
   margin-bottom: 3rem;
   align-self: start;
+  border-radius: 4px;
 }
 
 .feature__title {
