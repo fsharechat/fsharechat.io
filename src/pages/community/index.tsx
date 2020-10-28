@@ -56,7 +56,7 @@ const CareersPage = () => {
               <img
                 alt="A code editor containing a SQL statement"
                 className={careersStyles.card__illustration}
-                src="https://media.comsince.cn/minio-bucket-image-name/1-373z3zNN-1603354959057-qrcode_for_gh_17458ec142b0_1280.jpg"
+                src="https://media.comsince.cn/minio-bucket-image-name/wx-qr.png"
               />
             </div>
           </div>
