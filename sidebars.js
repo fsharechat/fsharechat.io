@@ -68,6 +68,13 @@ module.exports = {
       items: [
         "api/pushapi",
       ],
-    }  
+    },{
+      label: "服务咨询",
+      type: "category",
+      collapsed: false,
+      items: [
+        "consult/contact",
+      ],
+    }   
   ].filter(Boolean),
 }
