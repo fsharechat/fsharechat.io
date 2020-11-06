@@ -39,7 +39,7 @@ module.exports = {
         "concept/tech-doc",
         "concept/web-rtc-intro",
         "concept/muti-conference-rtc",
-        "concept/delivery-read-report.md"
+        "concept/delivery-read-report"
       ],
     },
     {
