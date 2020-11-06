@@ -159,7 +159,7 @@ git branch --set-upstream-to=origin/master
         <td>√</td>
     </tr>
     <tr>
-        <td rowspan="5">单聊</td>
+        <td rowspan="6">单聊</td>
         <td>文本/视频/图片</td>
         <td>√</td>
         <td>√</td>
@@ -192,6 +192,13 @@ git branch --set-upstream-to=origin/master
         <td>√</td>
         <td>×</td>
         <td>√</td>
+        <td>√</td>
+    </tr>
+    <tr>
+        <td>消息送达已读回执</td>
+        <td>×</td>
+        <td>×</td>
+        <td>×</td>
         <td>√</td>
     </tr>
     <tr>
