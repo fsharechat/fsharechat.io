@@ -149,14 +149,14 @@ kurento  17799     1  0 17:45 ?        00:00:00 /usr/bin/kurento-media-server
 ### 检查websocket RPC端口是否存在 
 
 ```shell
-$sudo netstat -tupln | grep -e kurento -e 8888
+sudo netstat -tupln | grep -e kurento -e 8888
 tcp6       0      0 :::8888                 :::*                    LISTEN      17799/kurento-media
 ```
 
 ### 测试websocket rpc链接
 
 ```shell
-$curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" -H "Host: 127.0.0.1:8888" -H "Origin: 127.0.0.1" http://127.0.0.1:8888/kurento
+curl -i -N -H "Connection: Upgrade" -H "Upgrade: websocket" -H "Host: 127.0.0.1:8888" -H "Origin: 127.0.0.1" http://127.0.0.1:8888/kurento
 ```
 ## 返回结果
 
@@ -165,6 +165,14 @@ HTTP/1.1 500 Internal Server Error
 Server: WebSocket++/0.7.0
 
 ```
+
+## 外部地址
+
+:::note
+如果media server有外部地址,可以不用配置turn/stun server地址,修改`/etc/kurento/modules/kurento/WebRtcEndpoint.conf.ini`
+externalAddress=10.20.30.40
+:::
+
 
 **NOTE:** 此测试命令在sudo 命令下执行
 
