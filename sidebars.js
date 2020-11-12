@@ -50,7 +50,8 @@ module.exports = {
         "prepare/mysql",
         "prepare/minio",
         "prepare/cert",
-        "prepare/nginx"
+        "prepare/nginx",
+        "prepare/coturn"
       ],
     },
     {
