@@ -1,6 +1,6 @@
 ---
 layout: post
-title: coturn服务安装
+title: Coturn服务安装
 category: IM
 description: im  muti-conference
 ---
@@ -30,7 +30,7 @@ make && make install
 
 ### 配置文件
 
-```properties
+```conf
 # 监听端口，不配置的话，默认是3478
 listening-port=3478
 # 内网地址
