@@ -92,15 +92,27 @@ ul ul :global(.table-of-contents__link--active::before) {
   }
 }
 
+@media (min-width: 1320px) and (max-width: 1637px) {
+  .doc {
+    --ifm-container-width: 1200px;
+  }
+  .doc__sidebar{
+    width: 300px;
+  }
+}
+
 @media (min-width: 1248px) and (max-width: 1320px) {
   .doc {
-    --ifm-container-width: 1300px;
+    --ifm-container-width: 1100px;
+  }
+  .doc__sidebar{
+    width: 300px;
   }
 }
 
 @media (min-width: 1124px) and (max-width: 1248px) {
   .doc {
-    --ifm-container-width: 1200px;
+    --ifm-container-width: 1100px;
   }
 }
 
