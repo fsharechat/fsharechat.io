@@ -62,6 +62,7 @@ module.exports = {
         "guide/centos",
         "guide/ubuntu",
         "guide/windows",
+        "guide/cluster",
       ],
     },{
       label: "开放接口",
