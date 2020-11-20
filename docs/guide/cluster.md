@@ -36,6 +36,10 @@ category: IM
 
 ### 安装包目录结构说明
 
+:::danger
+点击下载[安装包](https://media.comsince.cn/minio-bucket-file-name/fsharechat2.0.tar.gz)并解压到解压安装包到`/data/boot`目录,否则会出现错误
+:::
+
 ```shell
 ├── push-api ## push-api安装目录
 │   ├── config
