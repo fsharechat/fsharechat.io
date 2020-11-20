@@ -56,7 +56,7 @@ ul ul :global(.table-of-contents__link--active::before) {
 
 .doc {
   --ifm-heading-color: var(--palette-white);
-  --ifm-container-width: 1000px;
+  --ifm-container-width: 1400px;
   --ifm-menu-color: var(--palette-white);
   --ifm-menu-color-background-active: var(--palette-pink);
   --ifm-menu-link-padding-horizontal: 0.75rem;
@@ -71,7 +71,7 @@ ul ul :global(.table-of-contents__link--active::before) {
 
 .doc__sidebar {
   position: relative;
-  width: 300px;
+  width: 350px;
   margin-top: calc(-1 * var(--ifm-navbar-height));
   margin-right: 1rem;
   box-sizing: border-box;
