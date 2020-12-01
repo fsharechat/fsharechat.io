@@ -16,7 +16,7 @@ description:
   对webRTC整体技术有所了解，进而进一步了解我主要的学习重点，以及我们在开发实时聊天时需要解决的问题，可以参考这篇文章[WebRTC实时音视频技术的整体架构介绍](http://www.52im.net/thread-284-1-1.html)
   > WebRTC技术架构图
 
-  ![image](http://www.52im.net/data/attachment/forum/201605/05/111321jf5oiev7fnznfnon.png)
+  ![image](https://media.comsince.cn/minio-bucket-image-name/111321jf5oiev7fnznfnon.png)
 
 ## WebRTC服务器
   理解实时语音通信相关的通信策略，如何进行呼叫应答。也即是在建立媒体流之前如何进行对端链接，这需要信令服务器与turn服务器的配合
@@ -38,14 +38,14 @@ NAT的会话穿越功能Session Traversal Utilities for NAT (STUN) (缩略语的
 
 客户端通过给公网的STUN服务器发送请求获得自己的公网地址信息，以及是否能够被（穿过路由器）访问。
 
-![image](http://image.comsince.cn/webrtc-stun.png)
+![image](https://media.comsince.cn/minio-bucket-image-name/webrtc-stun.png)
 
 ##### TURN
 一些路由器使用一种“对称型NAT”的NAT模型。这意味着路由器只接受和对端先前建立的连接（就是下一次请求建立新的连接映射）。
 
 NAT的中继穿越方式Traversal Using Relays around NAT (TURN) 通过TURN服务器中继所有数据的方式来绕过“对称型NAT”。你需要在TURN服务器上创建一个连接，然后告诉所有对端设备发包到服务器上，TURN服务器再把包转发给你。很显然这种方式是开销很大的，所以只有在没得选择的情况下采用。
 
-![image](http://image.comsince.cn/webrtc-turn.png)
+![image](https://media.comsince.cn/minio-bucket-image-name/webrtc-turn.png)
 
 ##### ICE
 
@@ -57,15 +57,15 @@ NAT的中继穿越方式Traversal Using Relays around NAT (TURN) 通过TURN服�
 
 信令服务器在其中扮演中重要角色，因此良好的实时通讯信令设计，决定一个实时音视频通讯的关键，需要信令服务器帮助通信两端建立链接，下图为链接的流程图
 
-![image](http://image.comsince.cn/webrtc-signal-process.png)
+![image](https://media.comsince.cn/minio-bucket-image-name/webrtc-signal-process.png)
 
 ### 信令交换流程
 > 所有的程序逻辑都围绕这个信令交换流程进行代码编写，因此理解信令交换流程至关重要，前面已经对信令服务器,Stun,turn服务器做过简单介绍，现在主要说明它们之间是如何进行协同工作的
 
 #### 信令事务流程
-![image](http://image.comsince.cn/WebRTC%20-%20Signaling%20Diagram.svg)
+![image](https://media.comsince.cn/minio-bucket-image-name/WebRTC%20-%20Signaling%20Diagram.svg)
 #### ICE 候选交换过程
-![image](http://image.comsince.cn/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)
+![image](https://media.comsince.cn/minio-bucket-image-name/WebRTC%20-%20ICE%20Candidate%20Exchange.svg)
 
 **NOTE:** 详情请参考：[信令与视频通话](https://developer.mozilla.org/zh-CN/docs/Web/API/WebRTC_API/Signaling_and_video_calling)
 ## 实践

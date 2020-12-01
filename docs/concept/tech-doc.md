@@ -23,12 +23,12 @@ category: IM
 
 **NOTE:** 如下为简要的系统部署图
 
-![image](http://image.comsince.cn/push-universe-deploy.png)
+![image](https://media.comsince.cn/minio-bucket-image-name/1-373z3zNN-1605774295102-IM_Atitect.png)
 
 
 ## 系统流程图
 
-![image](http://image.comsince.cn/push-universe-flow.png)
+![image](https://media.comsince.cn/minio-bucket-image-name/push-universe-flow.png)
 
 重点关注核心要点:`登录实现`,`消息不丢失设计`
 
@@ -68,7 +68,7 @@ testim | 时间戳 | 用户名
 
 **NOTE:** 用户登录成功后,会成功获取到上面生成的token,例如web端在获取到这个`token`保存在浏览器的`localstorage`里面.这个toekn将作为后续发送验证请求的关键.登录成功后要发送`connect`信令进行链接验证,关于信令的传输将会在下面介绍
 
-![image](http://image.comsince.cn/push-universe-flow.png)
+![image](https://media.comsince.cn/minio-bucket-image-name/login.png)
 
 #### 解密分离token
 
