@@ -59,12 +59,7 @@ description:
 * pc 客户端下载
   * [windows客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-window.exe)
   * [macos客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-macos.dmg)
-  * [Linux客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-linux.AppImage)
-
-
-### 备用地址
-* [vue-chat-web版本](https://www.comsince.cn/web)
-* [vue-mobile-chat移动版本](https://www.comsince.cn/mobile)  
+  * [Linux客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-linux.AppImage) 
 
 **NOTE:** 由于现在没有开通短信功能,可以使用下演示帐号登录
 
