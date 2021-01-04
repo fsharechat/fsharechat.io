@@ -7,7 +7,7 @@ module.exports = (context) => ({
     //   `https://api.github.com/repos/questdb/questdb/releases/tags/${context.siteConfig.customFields.version}`,
     // )
     const data1 = {
-      html_url: 'https://api.github.com/repos/fsharechat/electron-vue-chat/releases/tags/v0.0.18',
+      html_url: 'https://api.github.com/repos/fsharechat/electron-vue-chat/releases/tags/v0.0.22',
       published_at: '2021-01-04T18:52:20Z',
       assets:[{
         browser_download_url:'https://media.comsince.cn/minio-bucket-file-name/fshare-chat-linux.AppImage',
