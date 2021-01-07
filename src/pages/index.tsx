@@ -163,7 +163,7 @@ const Jumbotron = () => {
         <div className={jumbotronStyles.jumbotron__cta}>
           <Button
             className={jumbotronStyles.jumbotron__link}
-            href="https://chat.comsince.cn"
+            href="https://pro.comsince.cn"
           >
             在线体验
           </Button>
