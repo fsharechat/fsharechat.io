@@ -62,6 +62,7 @@ MINIO_ACCESS_KEY=test MINIO_SECRET_KEY=test nohup ./minio  server --address ":44
 
 :::note
 关于使用nginx代码minio的https的方式请[参考](nginx)
+minio 重置密钥请删除/miniodata/目录下的`.minio.sys` 文件,然后重启,注意重启以后,要重新设置安全策略
 :::
 
 ## minio配置
