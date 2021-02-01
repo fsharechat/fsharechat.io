@@ -63,6 +63,7 @@ module.exports = {
         "guide/ubuntu",
         "guide/windows",
         "guide/cluster",
+        "guide/checklist"
       ],
     },{
       label: "开放接口",
