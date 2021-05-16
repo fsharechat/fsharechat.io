@@ -188,7 +188,7 @@ const Jumbotron = () => {
           </Button>
         </div>
         <p className={jumbotronStyles.jumbotron__description}>
-          演示帐号:13800000000 验证码: 556677
+          演示帐号:13800000000 验证码: 20210430
         </p>
       </div>
 
