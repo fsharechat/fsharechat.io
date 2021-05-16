@@ -196,6 +196,10 @@ certbot-auto renew
 
 ```shell
 certbot certonly  -d *.comsince.cn --manual --preferred-challenges dns --dry-run  --manual-auth-hook "/data/certbot/certbot-letencrypt-wildcardcertificates-alydns-au/au.sh python aly add" --manual-cleanup-hook "/data/certbot/certbot-letencrypt-wildcardcertificates-alydns-au/au.sh python aly clean"
+
+### 通配符证书为 *.example.com，对example.com无效，你需要通过Certbot的Certbot的-d标志来同时添加它们 ，例如：
+
+certbot certonly  -d *.fsharechat.cn -d fsharechat.cn --manual --preferred-challenges dns --manual-auth-hook "/data/certbot/certbot-letencrypt-wildcardcertificates-alydns-au/au.sh python aly add" --manual-cleanup-hook "/data/certbot/certbot-letencrypt-wildcardcertificates-alydns-au/au.sh python aly clean"
 ```
 
 </TabItem>
