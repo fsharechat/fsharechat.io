@@ -141,8 +141,8 @@ const config = {
       theme: require("./src/internals/prism-dracula"),
     },
     algolia: {
-      apiKey: "b2a69b4869a2a85284a82fb57519dcda",
-      indexName: "questdb",
+      apiKey: "39aa9d22a58c5ed5433bc0a538156654",
+      indexName: "fsharechat",
     },
     navbar: {
       title: " ",
