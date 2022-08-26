@@ -8,7 +8,7 @@ module.exports = (context) => ({
     // )
     const data1 = {
       html_url: 'https://api.github.com/repos/fsharechat/electron-vue-chat/releases/tags/v0.0.22',
-      published_at: '2021-01-04T18:52:20Z',
+      published_at: '2022-08-26T15:00:00Z',
       assets:[{
         browser_download_url:'https://media.comsince.cn/minio-bucket-file-name/fshare-chat-linux.AppImage',
         name:'fsharechat-0.0.22-rt-linux-amd64.appImage',

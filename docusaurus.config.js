@@ -19,7 +19,7 @@ const customFields = {
   oneLiner: "飞享IM 做技术自主可控的即时通讯IM",
   slackUrl: `https://slack.${domain}`,
   twitterUrl: "https://weibo.com/comsince",
-  version: "0.0.22",
+  version: "0.0.34",
 }
 
 function variable() {
