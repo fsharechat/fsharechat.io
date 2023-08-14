@@ -1,7 +1,7 @@
 {
-  "name": "QuestDB | Time series data, faster",
-  "short_name": "QuestDB",
-  "description": "QuestDB website and documentation",
+  "name": "飞享IM | 你身边的即时通讯IM专家",
+  "short_name": "FshareChat",
+  "description": "FshareChat 官方网站,私有IM部署",
   "start_url": "/",
   "background_color": "#21222c",
   "display": "minimal-ui",
