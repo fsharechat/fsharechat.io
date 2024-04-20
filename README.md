@@ -1,5 +1,5 @@
 
-# fshare.io
+# fsharechat.io
 
 [This website](https://fsharechat.cn/) is built using
 [Docusaurus 2](https://v2.docusaurus.io/). Pages & components are written in
