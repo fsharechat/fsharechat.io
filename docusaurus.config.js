@@ -5,12 +5,12 @@ const githubOrgUrl = "https://github.com/fsharechat"
 const domain = "https://fsharechat.github.io/"
 
 const customFields = {
-  artifactHubUrl: "https://artifacthub.io/packages/helm/questdb/questdb",
+  artifactHubUrl: "https://github.com/fsharechat/fsharechat.io",
   copyright: `Copyright © ${new Date().getFullYear()} Fsharechat`,
-  crunchbaseUrl: "https://www.crunchbase.com/organization/quest-db",
+  crunchbaseUrl: "https://github.com/fsharechat/fsharechat.io",
   description:
     "飞享IM 做技术自主可控的即时通讯IM",
-  dockerUrl: "https://hub.docker.com/r/questdb/questdb",
+  dockerUrl: "https://github.com/fsharechat/fsharechat.io",
   domain,
   githubOrgUrl,
   githubUrl: `${githubOrgUrl}`,
