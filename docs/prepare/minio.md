@@ -71,7 +71,7 @@ minio 重置密钥请删除/miniodata/目录下的`.minio.sys` 文件,然后重�
 
 在minio的管理控制台中,手动创建如下bucket
 
-![create-minio-bucket](https://media.comsince.cn/minio-bucket-image-name/1-TWTVTVWW-1603353071527-image.png)
+![create-minio-bucket](https://media.fsharechat.cn/minio-bucket-image-name/1-TWTVTVWW-1603353071527-image.png)
 
 * `minio-bucket-general-name`
 * `minio-bucket-image-name`
@@ -85,7 +85,7 @@ minio 重置密钥请删除/miniodata/目录下的`.minio.sys` 文件,然后重�
 
 MinIO 默认的策略是分享地址的有效时间最多是7天，要突破这种限制，可以在 bucket 中进行策略设置。点击对应的 bucket ，edit policy 添加策略 `*.*`
 
-![minio-policy](https://media.comsince.cn/minio-bucket-image-name/1-TWTVTVWW-1603352581183-image.png)
+![minio-policy](https://media.fsharechat.cn/minio-bucket-image-name/1-TWTVTVWW-1603352581183-image.png)
 
 :::note
  另外上传的文件必须带文件后缀,不然无法下载

@@ -56,7 +56,7 @@ const CareersPage = () => {
               <img
                 alt="A code editor containing a SQL statement"
                 className={careersStyles.card__illustration}
-                src="https://media.comsince.cn/minio-bucket-image-name/wx-qr.png"
+                src="https://media.fsharechat.cn/minio-bucket-image-name/wx-qr.png"
               />
             </div>
           </div>
@@ -73,7 +73,7 @@ const CareersPage = () => {
               <img
                 alt="A code editor containing a SQL statement"
                 className={careersStyles.card__illustration}
-                src="https://media.comsince.cn/minio-bucket-image-name/qq-group.png"
+                src="https://media.fsharechat.cn/minio-bucket-image-name/qq-group.png"
               />
             </div>
             <div className={careersStyles.card__side}>

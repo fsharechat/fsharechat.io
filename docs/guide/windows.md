@@ -14,7 +14,7 @@ category: IM
 
 ## 安装包
 下载如下安装包,解压文件到任意目录即可
-* [飞享windows安装包](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-windows-pro.tar.gz)
+* [飞享windows安装包](https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-windows-pro.tar.gz)
 
 ## 配置
 解压成功后,会看到`boot`如下目录
@@ -71,10 +71,10 @@ dubbo.registry.address=zookeeper://{修改这里为你的zookeeper地址}:2181
 #push.kafka.broker=kafka:9092
 
 ## 多人音视频媒体服务,默认使用公网服务,可先暂时不用修改
-kurento.clientUrl=ws://media.comsince.cn:8888/kurento
+kurento.clientUrl=ws://media.fsharechat.cn:8888/kurento
 
 ## minio对象存储,如果暂时不需要支持文件,图片,视频类消息发送,可以暂时不用配置
-minio.url=https://media.comsince.cn
+minio.url=https://media.fsharechat.cn
 ## minio access_key
 minio.access_key=
 ## minio secret_key

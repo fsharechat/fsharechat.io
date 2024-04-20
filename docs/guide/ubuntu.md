@@ -124,7 +124,7 @@ http {
          return 301 https://$host$request_uri;
       }
 
-      if ($host = media.comsince.cn) {
+      if ($host = media.fsharechat.cn) {
          return 301 https://$host$request_uri;
       }
 

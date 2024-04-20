@@ -84,16 +84,16 @@ yum install nc
     public static String MINIO_BUCKET_PORTRAIT_NAME = "minio-bucket-portrait-name";
     public static String MINIO_BUCKET_FAVORITE_NAME = "minio-bucket-favorite-name";
 ```
-<img src="https://media.comsince.cn/minio-bucket-image-name/1-373z3zNN-1594949312959-minio-bucket.png" alt="minio-bucket" align="center" />
+<img src="https://media.fsharechat.cn/minio-bucket-image-name/1-373z3zNN-1594949312959-minio-bucket.png" alt="minio-bucket" align="center" />
 
 * 权限设置
 
 **NOTE:** 所有的bucket都按照如下进行设置
 
-<img src="https://media.comsince.cn/minio-bucket-image-name/1-373z3zNN-1594949556742-bucket-policy.png" alt="minio-bucket" align="center" />
+<img src="https://media.fsharechat.cn/minio-bucket-image-name/1-373z3zNN-1594949556742-bucket-policy.png" alt="minio-bucket" align="center" />
 
 ## 下载完整安装包
-* [chat-server-deploy](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-pro.tar.gz)
+* [chat-server-deploy](https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-pro.tar.gz)
 
 **NOTE:** 下载完成后,请将压缩文件解压到`/`根目录下即可,注意上面的命令行都是以这个目录为标准的,切忌不要随意放置
 
@@ -102,10 +102,10 @@ yum install nc
 **NOTE:**  由于github仓库限制以及网络问题,不便上传.当你下载完下面两个服务jar包,分别放到相应服务的`lib`目录下,请选择以下最新版本下载
 
 ### push-connector服务
-* [push-connector-1.2.3](https://media.comsince.cn/minio-bucket-file-name/spring-boot-dubbo-push-connector-1.2.3.jar)
+* [push-connector-1.2.3](https://media.fsharechat.cn/minio-bucket-file-name/spring-boot-dubbo-push-connector-1.2.3.jar)
 
 ### push-group服务
-* [push-group-1.2.3](https://media.comsince.cn/minio-bucket-file-name/spring-boot-web-push-group-1.2.3.jar)
+* [push-group-1.2.3](https://media.fsharechat.cn/minio-bucket-file-name/spring-boot-web-push-group-1.2.3.jar)
 
 
 
@@ -127,10 +127,10 @@ dubbo.registry.address=zookeeper://zookeeper:2181
 #push.kafka.broker=kafka:9092
 
 ## kurento client url,群组音视频服务
-kurento.clientUrl=ws://media.comsince.cn:8888/kurento
+kurento.clientUrl=ws://media.fsharechat.cn:8888/kurento
 
 ## minio url
-minio.url=https://media.comsince.cn
+minio.url=https://media.fsharechat.cn
 ## minio access_key
 minio.access_key=
 ## minio secret_key

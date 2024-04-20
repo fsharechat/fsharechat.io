@@ -12,7 +12,7 @@ description: im  muti-conference
 
 当媒体服务器充当媒体中继时，它通常被称为SFU（Selective Forwarding Unit选择性转发单位），这意味着其主要目的是在客户端之间转发媒体流。还有一个MCU（Multipoint Conferencing Unit多点会议单元）的概念，MCU服务器不仅可以转发，而且可以对媒体流进行混合和编码压缩（比如把各个客户端的数据打包转发，和SFU相比，这样将大幅度降低转发数据的带宽需求，但对CPU有更高的要求）。
 
-![image](https://media.comsince.cn/minio-bucket-image-name/webrtc-commuication-model.png)
+![image](https://media.fsharechat.cn/minio-bucket-image-name/webrtc-commuication-model.png)
 
 
 ### Mesh架构
@@ -182,7 +182,7 @@ externalAddress=10.20.30.40
 
 **NOTE:** 下图是摘自官方文档的一个本地回环测试的架构图
 
-![image](https://media.comsince.cn/minio-bucket-image-name/kurento-java-tutorial-1-helloworld-pipeline.png)
+![image](https://media.fsharechat.cn/minio-bucket-image-name/kurento-java-tutorial-1-helloworld-pipeline.png)
 
 有两个websocket链接这里说明一下:
 * __一个是客户端与信息服务器通过websocket链接,用于信令交互__
@@ -190,7 +190,7 @@ externalAddress=10.20.30.40
 
 ## 信令交互图
 
-![image](https://media.comsince.cn/minio-bucket-image-name/kurento-java-tutorial-1-helloworld-signaling.png)
+![image](https://media.fsharechat.cn/minio-bucket-image-name/kurento-java-tutorial-1-helloworld-signaling.png)
 
 
 ## 一对一聊天
@@ -208,7 +208,7 @@ externalAddress=10.20.30.40
 
 **NOTE:** 如下图全新设计的信令交互图
 
-![image](https://media.comsince.cn/minio-bucket-image-name/one2oneSingnal.png)
+![image](https://media.fsharechat.cn/minio-bucket-image-name/one2oneSingnal.png)
 
 以下事项需要注意:
 * `CallStartmessage`和`AnswerCallMessage`,`Byemessage`需要转发到目标客户端

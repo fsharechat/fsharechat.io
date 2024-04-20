@@ -15,9 +15,9 @@ category: consult
 为了更好的体验,建议下载pc客户端
 :::
 
-* [windows客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-window.exe)
-* [macos客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-macos.dmg)
-* [Linux客户端](https://media.comsince.cn/minio-bucket-file-name/fshare-chat-linux.AppImage)
+* [windows客户端](https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-window.exe)
+* [macos客户端](https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-macos.dmg)
+* [Linux客户端](https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-linux.AppImage)
 
 :::caution
 * 登录成功请不要退出,以免需要再向我索要验证码

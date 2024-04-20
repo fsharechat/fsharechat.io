@@ -226,7 +226,7 @@ const Feature = () => (
         <img
           alt="Speedometer"
           className={featureStyles.feature__illustration}
-          src="https://media.comsince.cn/minio-bucket-image-name/feature-1.jpg"
+          src="https://media.fsharechat.cn/minio-bucket-image-name/feature-1.jpg"
         />
         <h2 className={featureStyles.feature__title}>IM即时通讯</h2>
         <p className={featureStyles.feature__description}>
@@ -241,7 +241,7 @@ const Feature = () => (
         <img
           alt="A code editor with a chart that shows the result of the query"
           className={featureStyles.feature__illustration}
-          src="https://media.comsince.cn/minio-bucket-image-name/feature-2.jpg"
+          src="https://media.fsharechat.cn/minio-bucket-image-name/feature-2.jpg"
         />
 
         <h2 className={featureStyles.feature__title}>音视频通话</h2>
@@ -258,7 +258,7 @@ const Feature = () => (
         <img
           alt="A code editor containing a SQL statement"
           className={featureStyles.feature__illustration}
-          src="https://media.comsince.cn/minio-bucket-image-name/feature-3.jpg"
+          src="https://media.fsharechat.cn/minio-bucket-image-name/feature-3.jpg"
         />
 
         <h2 className={featureStyles.feature__title}>群组消息</h2>

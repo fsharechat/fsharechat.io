@@ -1,7 +1,7 @@
 
 # fshare.io
 
-[This website](https://comsince.cn/) is built using
+[This website](https://fsharechat.cn/) is built using
 [Docusaurus 2](https://v2.docusaurus.io/). Pages & components are written in
 TypeScript, the styles in vanilla CSS with variables using
 [CSS Modules](https://github.com/css-modules/css-modules).

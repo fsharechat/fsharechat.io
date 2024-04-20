@@ -3,14 +3,14 @@ title: 2020技术总结与飞享IM项目规划发展
 author: comsince
 author_title: FshareIM Team
 author_url: https://comsince.cn
-author_image_url: https://media.comsince.cn/minio-bucket-portrait-name/fsharechat.png
+author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 tags: [996, 奋斗]
 ---
 
 <img
   alt="2020"
   className="banner"
-  src="https://media.comsince.cn/minio-bucket-image-name/2020-zongjie.gif"
+  src="https://media.fsharechat.cn/minio-bucket-image-name/2020-zongjie.gif"
 />
 
 ## 一年大事记载

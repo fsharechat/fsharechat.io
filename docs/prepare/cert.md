@@ -288,7 +288,7 @@ Congratulations, all renewals succeeded. The following certs have been renewed:
 
 ### KeyManager通过Cert生成jks
 
-![image](https://media.comsince.cn/minio-bucket-image-name/keymanager-pem-setting.png)
+![image](https://media.fsharechat.cn/minio-bucket-image-name/keymanager-pem-setting.png)
 
 * keytool 显示jks详细信息
 

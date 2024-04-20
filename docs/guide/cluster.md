@@ -9,7 +9,7 @@ category: IM
 飞享IM先已经支持集群版本部署.在说明集群版本部署之前,还是先说明以下集群的架构以方便大家能够理解部署的各个组件以及三方服务.
 * 以下为飞享IM的集群架构图 
 
-![架构图](https://media.comsince.cn/minio-bucket-image-name/1-373z3zNN-1605774295102-IM_Atitect.png)
+![架构图](https://media.fsharechat.cn/minio-bucket-image-name/1-373z3zNN-1605774295102-IM_Atitect.png)
 
 ## 依赖服务
 
@@ -37,7 +37,7 @@ category: IM
 ### 安装包目录结构说明
 
 :::danger
-点击下载[安装包](https://media.comsince.cn/minio-bucket-file-name/fsharechat2.0.tar.gz)并解压到解压安装包到`/data/boot`目录,否则会出现错误
+点击下载[安装包](https://media.fsharechat.cn/minio-bucket-file-name/fsharechat2.0.tar.gz)并解压到解压安装包到`/data/boot`目录,否则会出现错误
 :::
 
 ```shell
@@ -99,11 +99,11 @@ push.kafka.broker={kafka集群地址}:9092
 node.id=0
 
 ## kurento client url
-kurento.clientUrl=ws://media.comsince.cn:8888/kurento
+kurento.clientUrl=ws://media.fsharechat.cn:8888/kurento
 
 ## minio服务配置
 ## minio url 修改为你自己的minio服务地址
-minio.url=https://media.comsince.cn
+minio.url=https://media.fsharechat.cn
 ## minio access_key 这里是启动的时候设置的access_key
 minio.access_key=
 ## minio secret_key 这里是启动的时候设置的secret_key

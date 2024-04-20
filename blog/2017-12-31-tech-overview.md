@@ -4,13 +4,13 @@ description: Linux 基础技能
 author: comsince
 author_title: FshareIM Team
 author_url: https://comsince.cn
-author_image_url: https://media.comsince.cn/minio-bucket-portrait-name/fsharechat.png
+author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 ---
 
 <img
   alt="fendou"
   className="banner"
-  src="https://media.comsince.cn/minio-bucket-file-name/it.jpeg"
+  src="https://media.fsharechat.cn/minio-bucket-file-name/it.jpeg"
 />
 
 主要说明不断更新的软件技术指引未来发展方向，此文持续更新。对于技术的共性给出必要的原理解释。
