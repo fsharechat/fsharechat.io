@@ -55,7 +55,7 @@ description:
 * [vue-mobile-chat移动版本](https://chat.comsince.cn/mobile)
 * Android扫码下载  
 
-![image](https://media.fsharechat.cn/minio-bucket-image-name/1-373z3zNN-1594953226715-fshare-chat-apk-qrcode.png)
+![image](https://media.fsharechat.cn/minio-bucket-image-name/fsharechat-android-release-apk.png)
 
 * pc 客户端下载
   * [windows客户端](https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-window.exe)
