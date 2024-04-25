@@ -191,6 +191,27 @@ const config = {
     footer: {
       links: [
         {
+          title: "客户端下载",
+          items: [
+            {
+              label: "Android客户端",
+              to: "/client/",
+            },
+            {
+              label: "PC客户端",
+              to: "/getstarted/",
+            },
+            {
+              label: "Web客户端",
+              href: "https://web.fsharechat.cn",
+            },
+            {
+              label: "Web移动端",
+              href: "https://mobile.fsharechat.cn",
+            },
+          ],
+        },
+        {
           title: "飞享IM",
           items: [
             {
@@ -220,6 +241,8 @@ const config = {
             },
           ],
         },
+        
+
         {
           title: "更多",
           items: [

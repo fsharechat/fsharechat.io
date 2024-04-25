@@ -39,15 +39,13 @@ const CareersPage = () => {
           <div className={careersStyles.card}>
             <div className={careersStyles.card__side}>
               <h1 className={careersStyles["card__title--important"]}>
-                Careers
+                Android 客户端
               </h1>
               <p className={careersStyles.card__content}>
-                We help developers handle explosive amounts of data while
-                getting them started in just a few minutes with the simplest and
-                most accessible time series database.
+                支持一对一视频通过，群组视频通话
               </p>
               <Button className={careersStyles.card__cta} onClick={handleClick}>
-                Current openings
+                扫描右侧二维码下载
               </Button>
             </div>
             <div
@@ -59,11 +57,11 @@ const CareersPage = () => {
               <img
                 alt="A code editor containing a SQL statement"
                 className={careersStyles.card__illustration}
-                src="/img/pages/careers/teamCollaboration.svg"
+                src="https://media.fsharechat.cn/minio-bucket-image-name/fsharechat-android-release-apk.png"
               />
             </div>
           </div>
-          <div
+          {/* <div
             className={clsx(careersStyles.card, careersStyles["card--reverse"])}
           >
             <div
@@ -142,7 +140,7 @@ const CareersPage = () => {
                 </span>
               </a>
             </div>
-          </div>
+          </div> */}
         </section>
       </Layout>
     </MetadataContextProvider>
