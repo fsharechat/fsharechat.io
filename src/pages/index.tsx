@@ -188,7 +188,7 @@ const Jumbotron = () => {
           </Button>
         </div>
         <p className={jumbotronStyles.jumbotron__description}>
-          演示帐号:13800000000 验证码: 20210430
+          飞享IM现已开放邮箱验证码登录，请优先使用邮箱验证码进行登录！
         </p>
       </div>
 
