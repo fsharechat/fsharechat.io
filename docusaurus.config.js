@@ -57,6 +57,13 @@ const config = {
   organizationName: "fsharechat",
   projectName: "fsharechat.github.io",
   customFields,
+  scripts: [
+    {
+      src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9034069354814570",
+      async: true,
+      crossorigin: "anonymous",
+    },
+  ],
   plugins: [
     require.resolve("./plugins/fetch-release"),
     require.resolve("./plugins/lint"),
