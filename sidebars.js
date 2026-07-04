@@ -78,7 +78,10 @@ module.exports = {
       collapsed: false,
       items: [
         "consult/contact",
+        "consult/about",
+        "consult/privacy",
+        "consult/terms",
       ],
-    }   
+    }
   ].filter(Boolean),
 }

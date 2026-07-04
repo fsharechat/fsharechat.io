@@ -2,7 +2,7 @@ const visit = require("unist-util-visit")
 const ssrTemplate = require("./src/internals/ssr.template")
 
 const githubOrgUrl = "https://github.com/fsharechat"
-const domain = "https://fsharechat.github.io/"
+const domain = "fsharechat.cn"
 
 const customFields = {
   artifactHubUrl: "https://github.com/fsharechat/fsharechat.io",
@@ -260,6 +260,18 @@ const config = {
             {
               label: "GitHub",
               href: customFields.githubUrl,
+            },
+            {
+              label: "关于我们",
+              to: "/docs/consult/about/",
+            },
+            {
+              label: "隐私政策",
+              to: "/docs/consult/privacy/",
+            },
+            {
+              label: "服务条款",
+              to: "/docs/consult/terms/",
             },
           ],
         },

@@ -3,31 +3,23 @@ import DocusaurusHead from "@docusaurus/Head"
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext"
 import React from "react"
 
-// import Button from "@theme/Button"
 import Layout from "@theme/Layout"
 import { MetadataContextProvider } from "@theme/useMetadataContext"
 
 import careersStyles from "../../css/careers.module.css"
 import sectionStyles from "../../css/section.module.css"
 
-const CareersPage = () => {
+const CommunityPage = () => {
   const title = "社区"
   const description = "加入飞享社区,尽享IM资讯"
   const { siteConfig } = useDocusaurusContext()
-  // const titleRef = useRef<HTMLHeadingElement | null>(null)
-  // const handleClick = useCallback(() => {
-  //   titleRef.current?.scrollIntoView({ behavior: "smooth" })
-  // }, [titleRef])
 
   return (
     <MetadataContextProvider>
       <Layout description={description} title={title}>
         <DocusaurusHead>
-          <link rel="canonical" href={`${siteConfig.url}/careers/`} />
-          <meta
-            name="description"
-            content="An open source time series SQL database for fast ingestion and queries"
-          />
+          <link rel="canonical" href={`${siteConfig.url}/community/`} />
+          <meta name="description" content={description} />
         </DocusaurusHead>
         <section
           className={clsx(
@@ -43,9 +35,6 @@ const CareersPage = () => {
               <p className={careersStyles.card__content}>
                 扫描关注飞享即时通讯IM公众号,获取飞享相关更新日志与相关的技术架构,分享IM相关技术实现
               </p>
-              {/* <Button className={careersStyles.card__cta} onClick={handleClick}>
-                Current openings
-              </Button> */}
             </div>
             <div
               className={clsx(
@@ -54,7 +43,7 @@ const CareersPage = () => {
               )}
             >
               <img
-                alt="A code editor containing a SQL statement"
+                alt="飞享IM 官方公众号二维码"
                 className={careersStyles.card__illustration}
                 src="https://media.fsharechat.cn/minio-bucket-image-name/wx-qr.png"
               />
@@ -71,7 +60,7 @@ const CareersPage = () => {
               )}
             >
               <img
-                alt="A code editor containing a SQL statement"
+                alt="飞享IM QQ交流群二维码"
                 className={careersStyles.card__illustration}
                 src="https://media.fsharechat.cn/minio-bucket-image-name/qq-group.png"
               />
@@ -97,46 +86,10 @@ const CareersPage = () => {
               </ul>
             </div>
           </div>
-          {/* <div className={careersStyles.card}>
-            <div className={careersStyles.card__side}>
-              <h2 className={careersStyles.card__title} ref={titleRef}>
-                Current openings
-              </h2>
-              <p className={careersStyles.card__content}>
-                We are always interested in hiring new talent, so if you are
-                looking for a role that does is not listed, you can contact us
-                anyway! Send your CV with any relevant links (GitHub, LinkedIn,
-                personal website, etc.) to{" "}
-                <a href="mailto:careers@questdb.io">careers@questdb.io</a>, we
-                will review your application and be in touch.
-              </p>
-            </div>
-            <div
-              className={clsx(
-                careersStyles.card__side,
-                careersStyles["card__side--center"],
-              )}
-            >
-              <a className={careersStyles.job} href="technical-content-writer">
-                <h3 className={careersStyles.job__title}>
-                  Technical Content Writer
-                </h3>
-                <p className={careersStyles.job__location}>Remote</p>
-                <span className={careersStyles.job__cta}>
-                  Details&nbsp;
-                  <img
-                    alt=""
-                    src="/img/pages/careers/arrowRight.svg"
-                    width="20px"
-                  />
-                </span>
-              </a>
-            </div>
-          </div> */}
         </section>
       </Layout>
     </MetadataContextProvider>
   )
 }
 
-export default CareersPage
+export default CommunityPage

@@ -11,7 +11,7 @@ const iconSizes = [
 
 module.exports = ({ customFields, favicon, organizationName, url }) => `
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="zh-CN" >
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
@@ -19,7 +19,6 @@ module.exports = ({ customFields, favicon, organizationName, url }) => `
     <meta property="og:type" content="website" />
     <meta name="author" content="${organizationName}">
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@questdb" />
     <meta name="generator" content="Docusaurus v<%= it.version %>">
     <link href="https://www.googletagmanager.com" rel="dns-prefetch" />
     <link href="https://www.google-analytics.com" rel="dns-prefetch" />
