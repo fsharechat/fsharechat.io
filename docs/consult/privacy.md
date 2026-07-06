@@ -7,7 +7,7 @@ category: consult
 
 *最近更新时间：2026年7月*
 
-本隐私政策说明飞享IM官方文档与信息站点（`fsharechat.cn`，以下简称"本站"）在你访问时如何收集、使用信息。本政策仅适用于本站，不适用于飞享IM开源项目被第三方私有化部署后的实例，也不适用于本站之外的独立产品域名（如 `chat.comsince.cn`、`web.fsharechat.cn`、`mobile.fsharechat.cn` 等实际IM聊天服务，其数据处理请以对应服务内的说明为准）。
+本隐私政策说明飞享IM官方文档与信息站点（`fsharechat.cn`，以下简称"本站"）在你访问时如何收集、使用信息。本政策仅适用于本站，不适用于飞享IM开源项目被第三方私有化部署后的实例，也不适用于本站之外的独立产品域名（如 `chat.comsince.cn`、`web3.fsharechat.cn`、`mobile.fsharechat.cn` 等实际IM聊天服务，其数据处理请以对应服务内的说明为准）。
 
 ## 我们收集的信息
 

@@ -210,7 +210,7 @@ const config = {
             },
             {
               label: "Web客户端",
-              href: "https://web.fsharechat.cn",
+              href: "https://web3.fsharechat.cn",
             },
             {
               label: "Web移动端",
