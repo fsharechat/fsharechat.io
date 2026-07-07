@@ -4,8 +4,9 @@ author: comsince
 author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
-tags: [996, 奋斗]
+tags: ["996", 奋斗]
 image: https://media.fsharechat.cn/minio-bucket-image-name/2020-zongjie.gif
+description: 飞享IM 2020年度技术总结：项目起源、开源历程与2021年功能规划
 ---
 
 <img
