@@ -5,6 +5,7 @@ author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 tags: [IM, 即时通讯, 产品展示, 全平台, 音视频通话, WebRTC, 私有化部署, AI Agent]
+image: /img/blog/2026-07-06/4.png
 ---
 
 飞享IM(FshareIM) 不是一份 PPT 里的 IM 系统方案，是真的在 Web、PC、iOS、Android 四端跑起来、每天有人在用的产品。这篇文章不讲代码，只用真实截图带你把这套系统从头看一遍：消息怎么同步、群怎么管、AI 机器人怎么在 IM 里推日报、音视频通话跨端能不能打通，以及——如果你想把它装到自己服务器上，需要什么。

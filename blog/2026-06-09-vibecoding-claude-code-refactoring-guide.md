@@ -5,6 +5,7 @@ author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 tags: [Vibecoding, Claude Code, Vue3, TypeScript, 重构, IM, AI编程, 方法论]
+image: /img/blog/2026-06-09/1.png
 ---
 
 本文记录了将 `vue-chat-pro`（Vue 2 + Vuex + JavaScript）重构为 `vue-chat-pro-claude`（Vue 3 + Pinia + TypeScript + Vite）的完整历程。7天，64次提交，从零开始建出一个功能完整的即时通讯客户端。这不是一篇"AI 生成代码"的展示文，而是一份关于**如何与 AI 协作完成真实工程任务**的方法论总结。
