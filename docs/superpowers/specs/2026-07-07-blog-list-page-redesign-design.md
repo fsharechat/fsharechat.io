@@ -36,7 +36,7 @@
 
 - **标题**：新增 `blogListItemTitle` 样式类（区别于详情页沿用的 `blogPostTitle`），字号约 `1.375rem`（22px）、加粗，`-webkit-line-clamp: 2` 限制最多两行，超出显示省略号，整体可点击跳转到文章详情。
 - **meta 行**：左侧小头像（约 28px）+ 作者名 + 日期 + 阅读时长，一行展示，小号浅色文字；右侧最多展示 4 个标签（`tags.slice(0, 4)`），标签样式为小胶囊，颜色沿用现有配色。头像/作者信息缺失时该项直接不渲染（兼容没写 `author` 的文章）。
-- **摘要**：优先取 `frontMatter.description`；未填写时回退渲染 `children`（即 truncate 前的正文），外层容器加 `-webkit-line-clamp: 2` 做两行裁剪。
+- **摘要**：直接使用 `metadata.description` 字段——该字段由 Docusaurus 在构建期生成，值为 `frontMatter.description || excerpt`（`excerpt` 是官方 `createExcerpt()` 从正文自动提取的纯文本，已剥离标题/加粗/图片/HTML 标签等 Markdown 标记），无需自己实现"优先 description、回退正文"的逻辑。渲染为普通 `<p>`，外层加 `-webkit-line-clamp: 2` 做两行裁剪。
 - **缩略图**：仅当 `frontMatter.image` 存在时渲染右侧缩略图列（固定尺寸约 120×80，`object-fit: cover`，圆角）；不存在时文本列自动占满整行，不留空白占位。视口宽度小于约 640px 时隐藏缩略图列，保证移动端为单栏纯文字布局。
 - **列表项间距**：用一条细分割线（`border-bottom: 1px solid var(--palette-white-10)`）替代现有的 `margin-bottom--xl`，让列表整体更紧凑，接近参考样式的列表观感。
 
@@ -65,7 +65,7 @@
 
 ## 已知限制
 
-- 摘要裁剪依赖当前所有文章 `<!--truncate-->` 前内容均为单段落这一事实。若未来新文章在 truncate 前写了多段落或列表，`-webkit-line-clamp` 在多个块级子元素上的裁剪表现在不同浏览器间可能不一致，需要作者自觉保持"truncate 前为单段纯文字简介"的写作习惯，或后续再补充处理逻辑。
+- `metadata.description` 在没有 frontmatter `description` 时由 `createExcerpt()` 自动截取正文若干行拼接成一段纯文本，长度不完全可控（例如比较短的段落可能不够两行、较长的段落会被 `-webkit-line-clamp: 2` 裁到刚好两行），属于 Docusaurus 内置行为，不在本次改动范围内单独处理。
 - 12 篇无图文章的列表项固定为纯文字宽版布局，与 4 篇有图文章的双栏布局并存，列表视觉上不完全统一（本次范围内是预期结果，用户已确认）。
 
 ## 验收标准
