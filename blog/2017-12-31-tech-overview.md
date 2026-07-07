@@ -5,6 +5,7 @@ author: comsince
 author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
+image: https://media.fsharechat.cn/minio-bucket-file-name/it.jpeg
 ---
 
 <img
