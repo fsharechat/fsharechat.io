@@ -5,6 +5,7 @@ author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 tags: [Vibecoding, Claude Code, iOS, Swift, UIKit, IM, 即时通讯, 方法论, 复盘]
+image: /img/blog/2026-06-29/banner.png
 ---
 
 这是一篇关于「人不看代码、AI 全程执行」的真实工程记录。`ios-chat-pro` 是飞享 IM 的 iOS 原生客户端，用 Swift + UIKit 实现，对接自研 TCP 协议和 protobuf 二进制消息，功能覆盖单聊、群聊、音视频通话、好友管理、群组管理、消息撤回。
