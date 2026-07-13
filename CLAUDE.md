@@ -37,6 +37,71 @@ NODE_OPTIONS=--openssl-legacy-provider yarn start
 - **端口 3000 被占用**：`lsof -nP -iTCP:3000 -sTCP:LISTEN` 查看占用进程；若是启动多日、访问返回 503 的僵尸进程，`kill <PID>` 后重新执行上面的启动命令。
 - **curl/浏览器访问 localhost 返回 503 但进程正常**：若本机设置了 `http_proxy`/`https_proxy` 环境变量，可能会把 localhost 请求也转发到代理导致 503。用 `curl --noproxy localhost ...` 验证；浏览器需将 `localhost`/`127.0.0.1` 加入代理例外。
 
+## 撰写并发布博客文章
+
+在 `blog/` 目录新增文章的完整流程（参考 `blog/2026-07-13-message-list-virtualization-methodology.md` 等近期文章）：
+
+### 1. 文件命名
+
+`blog/YYYY-MM-DD-slug.md`，`slug` 用英文短横线命名。同一天可以有多篇文章，只要 `slug` 不同（不是"一天只能发一篇"）。
+
+### 2. Frontmatter 模板
+
+```yaml
+---
+title: 数字/结论量化的标题：冒号后接一句更完整的描述
+author: comsince
+author_title: FshareIM Team
+author_url: https://comsince.cn
+author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
+tags: [Vibecoding, Claude Code, <技术栈>, <领域>, 方法论, 复盘]
+image: /img/blog/YYYY-MM-DD/banner.png   # 可选，见下方"配图"
+---
+```
+
+- `title` 惯用"量化结论 + 冒号 + 描述"的句式（例：「12天337提交：用 Vibe Coding 从零构建 iOS IM 客户端的复盘」「从724ms到0ms：一次 Vibe Coding 消息列表虚拟化复盘」），不是必须但符合本站风格。
+- `tags` 是数组，近期文章常见标签：`Vibecoding`、`Claude Code`、`IM`、`即时通讯`、`方法论`、`复盘`，外加具体技术栈（`Electron`、`Vue`、`iOS`、`Swift` 等）。
+- **`image` 是可选字段**，不是每篇文章都有。若要设置，必须先把真实图片放到 `static/img/blog/YYYY-MM-DD/banner.png`（路径对应 `/img/blog/YYYY-MM-DD/banner.png`），**绝不能引用一个不存在的图片路径** —— Claude Code 本身没有配图生成能力时，直接省略 `image` 字段即可，不要编造路径。
+
+### 3. 正文结构
+
+```markdown
+（开头 2~4 句：背景 + 这篇文章的核心结论/数字，作为钩子）
+
+<!--truncate-->
+
+---
+
+## 一、xxx
+### 1. 子标题
+（正文，善用**粗体**标注关键论断、表格呈现前后对比数据、> 引用块标注具体案例/证据）
+
+## 二、xxx
+...
+```
+
+- `<!--truncate-->` 是博客列表页"阅读更多"的分割线，必须紧跟在开头钩子段落之后。
+- 二级标题用中文数字（一、二、三…），三级标题可以是阿拉伯数字或直接描述性短句，参照近期文章即可，没有强制模板。
+- 全文中文写作。
+
+### 4. 校验 frontmatter（无需完整构建）
+
+完整 `yarn build` 较重（见上方"本地启动注意事项"的 Node 版本坑）。写完文章后，用下面的命令快速校验 frontmatter 是否是合法 YAML，能提前发现冒号/引号转义之类的低级错误：
+
+```bash
+node -e "
+const fs = require('fs');
+const content = fs.readFileSync('blog/<文件名>.md', 'utf8');
+const fm = content.split('---')[1];
+const yaml = require('js-yaml');
+console.log(JSON.stringify(yaml.load(fm), null, 2));
+"
+```
+
+### 5. Git 流程
+
+写完文章**只创建文件，不要自动 `git add` / `git commit` / `git push`**，除非用户在当次请求里明确要求提交。这是仓库通用的协作约定，博客文章不例外。
+
 ## 架构说明
 
 ### 内容 vs. 代码
