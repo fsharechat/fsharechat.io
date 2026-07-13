@@ -18,6 +18,25 @@ yarn deploy       # 部署到 GitHub Pages
 
 **代码检查自动运行**：通过 Husky pre-commit 钩子（lint-staged 校验图片文件大小），以及 `yarn build` 时由 fork-ts-checker-webpack-plugin 触发。
 
+### 本地启动注意事项
+
+本仓库依赖 Docusaurus 2.0.0-alpha.64（内置 webpack 4），在 Node 17+（含本机常用的 Node 20/22）直接执行 `yarn start` 会报错：
+
+```
+Error: error:0308010C:digital envelope routines::unsupported
+```
+
+需加上 `--openssl-legacy-provider` 后再启动：
+
+```bash
+NODE_OPTIONS=--openssl-legacy-provider yarn start
+```
+
+其他排查点：
+
+- **端口 3000 被占用**：`lsof -nP -iTCP:3000 -sTCP:LISTEN` 查看占用进程；若是启动多日、访问返回 503 的僵尸进程，`kill <PID>` 后重新执行上面的启动命令。
+- **curl/浏览器访问 localhost 返回 503 但进程正常**：若本机设置了 `http_proxy`/`https_proxy` 环境变量，可能会把 localhost 请求也转发到代理导致 503。用 `curl --noproxy localhost ...` 验证；浏览器需将 `localhost`/`127.0.0.1` 加入代理例外。
+
 ## 架构说明
 
 ### 内容 vs. 代码
