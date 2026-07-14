@@ -5,7 +5,10 @@ author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 tags: [Vibecoding, Claude Code, Electron, Vue, 性能优化, IM, 即时通讯, 方法论, 复盘]
+image: /img/blog/2026-07-13/banner-virtualization.png
 ---
+
+![从724ms到0ms：一次 Vibe Coding 消息列表虚拟化复盘](/img/blog/2026-07-13/banner-virtualization.png)
 
 飞享 IM 桌面端（`electron-vue-chat-pro`）收到一条反馈：切到含超长 Markdown 表格（系统通知日报）的会话时，界面会冻结小半秒，即便每会话消息数已经限制在 50 条以内。这篇文章记录的不是"我们做了个虚拟列表"，而是从这句模糊反馈到一个可放心合并的实现之间，中间每一步该做、且没有跳过的判断——用 Claude Code 全程执行，人负责拍板方向和最终验收。
 
