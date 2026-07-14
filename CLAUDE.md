@@ -61,12 +61,15 @@ image: /img/blog/YYYY-MM-DD/banner.png   # 可选，见下方"配图"
 
 - `title` 惯用"量化结论 + 冒号 + 描述"的句式（例：「12天337提交：用 Vibe Coding 从零构建 iOS IM 客户端的复盘」「从724ms到0ms：一次 Vibe Coding 消息列表虚拟化复盘」），不是必须但符合本站风格。
 - `tags` 是数组，近期文章常见标签：`Vibecoding`、`Claude Code`、`IM`、`即时通讯`、`方法论`、`复盘`，外加具体技术栈（`Electron`、`Vue`、`iOS`、`Swift` 等）。
-- **`image` 是可选字段**，不是每篇文章都有。若要设置，必须先把真实图片放到 `static/img/blog/YYYY-MM-DD/banner.png`（路径对应 `/img/blog/YYYY-MM-DD/banner.png`），**绝不能引用一个不存在的图片路径** —— Claude Code 本身没有配图生成能力时，直接省略 `image` 字段即可，不要编造路径。
+- **`image` 是可选字段**，不是每篇文章都有。若要设置，必须先把真实图片放到 `static/img/blog/YYYY-MM-DD/banner.png`（路径对应 `/img/blog/YYYY-MM-DD/banner.png`），**绝不能引用一个不存在的图片路径** —— Claude Code 本身没有配图生成能力时，直接省略 `image` 字段即可，不要编造路径。同一天若已有文章占用了 `banner.png`，换个文件名（如 `banner-<slug 关键词>.png`），不要覆盖已有文件。
+- 正文中插入配图的 `![...](...)` 标签**必须放在开头钩子段落之后、`<!--truncate-->` 之前**，绝不能放在钩子段落前面——见下方"正文结构"一节的说明。
 
 ### 3. 正文结构
 
 ```markdown
 （开头 2~4 句：背景 + 这篇文章的核心结论/数字，作为钩子）
+
+![标题文字](/img/blog/YYYY-MM-DD/banner.png)   <!-- 若有配图，放这里 -->
 
 <!--truncate-->
 
@@ -80,7 +83,8 @@ image: /img/blog/YYYY-MM-DD/banner.png   # 可选，见下方"配图"
 ...
 ```
 
-- `<!--truncate-->` 是博客列表页"阅读更多"的分割线，必须紧跟在开头钩子段落之后。
+- `<!--truncate-->` 是博客列表页"阅读更多"的分割线，必须紧跟在开头钩子段落（以及紧随其后的配图，如果有的话）之后。
+- **配图 `![...]()` 必须放在钩子段落之后、`<!--truncate-->` 之前，绝不能放在钩子段落前面**：Docusaurus 博客列表页的摘要是"`<!--truncate-->` 之前内容的纯文本提取"，如果图片是这段内容里的第一个块级元素，摘要会退化成图片的 alt 文字（等于把标题又展示了一遍），而不是钩子段落的正文。2026-07 曾在四篇已发布文章（`2026-07-13-message-list-virtualization-methodology.md`、`2026-07-13-superpowers-vs-grillme-vibecoding.md`、`2026-07-14-oauth2-legacy-vs-modern-token-flow.md`、`2026-07-14-chat-server-pro-binary-protocol-deep-dive.md`）上踩过这个坑，统一改成"钩子段落 → 配图 → truncate"的顺序后修复。
 - 二级标题用中文数字（一、二、三…），三级标题可以是阿拉伯数字或直接描述性短句，参照近期文章即可，没有强制模板。
 - 全文中文写作。
 
