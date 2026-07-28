@@ -692,7 +692,7 @@ const Home = () => {
     <MetadataContextProvider>
       <Layout description={siteConfig.customFields.description} title={title}>
         <DocusaurusHead>
-          <link rel="canonical" href={siteConfig.url} />
+          <link rel="canonical" href={`${siteConfig.url}/`} />
         </DocusaurusHead>
         <Jumbotron />
         <Feature />

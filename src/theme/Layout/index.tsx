@@ -41,15 +41,19 @@ const Layout = ({
   const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle
   const metaImage = image || defaultImage
   const metaImageUrl = useBaseUrl(metaImage, { absolute: true })
+  // 服务器会把不带斜杠的 URL 301 到带斜杠的版本，canonical 必须与之一致
+  const canonicalUrl =
+    permalink &&
+    siteUrl + (permalink.endsWith("/") ? permalink : `${permalink}/`)
 
   return (
     <UserPreferencesProvider>
       <Head>
         <title>{metaTitle}</title>
-        {permalink && <link rel="canonical" href={siteUrl + permalink} />}
+        {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
         {description && <meta name="description" content={description} />}
         <meta property="og:image" content={metaImageUrl} />
-        <meta property="og:url" content={`${siteUrl}${permalink || ""}`} />
+        <meta property="og:url" content={canonicalUrl || siteUrl} />
         <meta property="og:title" content={metaTitle} />
         {description && (
           <meta property="og:description" content={description} />

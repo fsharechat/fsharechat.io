@@ -9,11 +9,18 @@ import TableOfContents from "@theme/TOC"
 function BlogPostPage(props: Props): JSX.Element {
   const { content: BlogPostContents } = props
   const { frontMatter, metadata } = BlogPostContents
-  const { title, description, nextItem, prevItem, editUrl } = metadata
+  const {
+    title,
+    description,
+    nextItem,
+    prevItem,
+    editUrl,
+    permalink,
+  } = metadata
   const { hide_table_of_contents: hideTableOfContents } = frontMatter
 
   return (
-    <Layout title={title} description={description}>
+    <Layout title={title} description={description} permalink={permalink}>
       {BlogPostContents && (
         <div className="container margin-vert--lg">
           <div className="row">
