@@ -53,9 +53,12 @@ image: /img/blog/2026-10-13/desktop.png
 
 ### 1. Android：android-chat-pro
 
-![飞享IM Android 客户端](/img/blog/2026-10-13/android.png)
+<div style={{display: "flex", gap: "16px", alignItems: "flex-start"}}>
+  <img src="/img/blog/2026-10-13/android.png" alt="飞享IM Android 客户端会话列表" style={{width: "360px", maxWidth: "calc(50% - 8px)"}} />
+  <img src="/img/blog/2026-10-13/android-conversation.png" alt="飞享IM Android 客户端聊天界面" style={{width: "360px", maxWidth: "calc(50% - 8px)"}} />
+</div>
 
-*Android 客户端 2.0.15：会话列表*
+*Android 客户端 2.0.15：会话列表与聊天界面*
 
 飞享最早的客户端，也是历史最长的一个，最早的提交可以追溯到 2020 年。
 
@@ -68,9 +71,12 @@ image: /img/blog/2026-10-13/desktop.png
 
 ### 2. iOS：ios-chat-pro
 
-![飞享IM iOS 客户端](/img/blog/2026-10-13/ios.png)
+<div style={{display: "flex", gap: "16px", alignItems: "flex-start"}}>
+  <img src="/img/blog/2026-10-13/ios.png" alt="飞享IM iOS 客户端会话列表" style={{width: "360px", maxWidth: "calc(50% - 8px)"}} />
+  <img src="/img/blog/2026-10-13/ios-conversation.png" alt="飞享IM iOS 客户端聊天界面" style={{width: "360px", maxWidth: "calc(50% - 8px)"}} />
+</div>
 
-*iOS 客户端：深色模式下的会话列表*
+*iOS 客户端：深色模式下的会话列表与聊天界面*
 
 2026 年 6 月从零开始、完全用 Vibe Coding 方式开发的原生 iOS 客户端，是四个仓库中 AI 参与程度最深的一个。
 
