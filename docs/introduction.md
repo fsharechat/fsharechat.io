@@ -24,7 +24,8 @@ description:
 * [vue-mobile-chat](https://github.com/fsharechat/vue-mobile-chat) 基于vue的移动端项目
 
 ### Electron-Vue 客户端
-* [electron-vue-chat](https://github.com/fsharechat/electron-vue-chat) 基于electron的pc端项目
+* [electron-vue-chat](https://github.com/fsharechat/electron-vue-chat) 基于electron的pc端项目（已停止维护）
+* [electron-vue-chat-pro](https://github.com/fsharechat/electron-vue-chat-pro) 基于electron-vite + Vue 3的pc端项目
 
 **NOTE:** 专业版提供付费技术支持,并且提供源码授权,请联系QQ `1282212195`,带有pro后缀的专业版项目,只对付费用户开放
 

@@ -6,21 +6,22 @@ module.exports = (context) => ({
     // const response = await nodeFetch(
     //   `https://api.github.com/repos/questdb/questdb/releases/tags/${context.siteConfig.customFields.version}`,
     // )
+    // 安装包由 electron-vue-chat-pro 的 CI 发版时自动拷贝到 minio，文件名固定；发新版时更新这里的版本、日期和大小
     const data1 = {
-      html_url: 'https://api.github.com/repos/fsharechat/electron-vue-chat/releases/tags/v1.4.0',
-      published_at: '2026-07-16T10:02:32Z',
+      html_url: `${context.siteConfig.customFields.desktopRepoUrl}/releases/tag/v${context.siteConfig.customFields.version}`,
+      published_at: '2026-10-14T01:06:04Z',
       assets:[{
         browser_download_url:'https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-linux.AppImage',
-        name:'fsharechat-0.0.22-rt-linux-amd64.appImage',
-        size:119835292
+        name:'electron-vue-chat-pro-1.8.0-linux-x86_64.AppImage',
+        size:114472815
       },{
         browser_download_url:'https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-macos.dmg',
-        name:'fsharechat-0.0.22-rt-osx-amd64.dmg',
-        size:117980685
+        name:'electron-vue-chat-pro-1.8.0-osx-x64.dmg',
+        size:111474070
       },{
         browser_download_url:'https://media.fsharechat.cn/minio-bucket-file-name/fshare-chat-window.exe',
-        name:'fsharechat-0.0.22-rt-windows-amd64.exe',
-        size:85512736
+        name:'electron-vue-chat-pro-1.8.0-windows-x64.exe',
+        size:85125811
       }]
     };
     // const data = await response.json()

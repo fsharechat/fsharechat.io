@@ -106,7 +106,7 @@ const GetStartedPage = () => {
   const { release } = usePluginData<{ release: Release }>("fetch-release")
   const [os, setOs] = useState<Os | undefined>()
   const [releaseDate, setReleaseDate] = useState(
-    format(new Date(release.published_at), "MMMM M, yyyy"),
+    format(new Date(release.published_at), "MMMM d, yyyy"),
   )
   const assets = getAssets(release)
 
@@ -277,7 +277,7 @@ const GetStartedPage = () => {
               </a>
               <a
                 className={getStartedStyles.getStarted__link}
-                href={`${siteConfig.customFields.githubUrl}/tags`}
+                href={`${siteConfig.customFields.desktopRepoUrl}/releases`}
                 rel="noopener noreferrer"
                 target="_blank"
               >

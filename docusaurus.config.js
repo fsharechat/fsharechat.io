@@ -19,7 +19,8 @@ const customFields = {
   oneLiner: "飞享IM 做技术自主可控的即时通讯IM",
   slackUrl: `https://slack.${domain}`,
   twitterUrl: "https://weibo.com/comsince",
-  version: "1.4.0",
+  version: "1.8.0",
+  desktopRepoUrl: `${githubOrgUrl}/electron-vue-chat-pro`,
 }
 
 function variable() {
