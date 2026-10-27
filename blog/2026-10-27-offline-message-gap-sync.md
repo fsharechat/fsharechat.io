@@ -5,9 +5,12 @@ author_title: FshareIM Team
 author_url: https://comsince.cn
 author_image_url: https://media.fsharechat.cn/minio-bucket-portrait-name/fsharechat.png
 tags: [IM, 即时通讯, 消息同步, 离线消息, 架构设计, 兼容性, Android, iOS, Electron, Vue, 飞享IM]
+image: /img/blog/2026-10-27/banner.png
 ---
 
 手机关机一个晚上，第二天打开飞享IM，群里已经聊了几十条。最新的消息都在，往上翻，翻着翻着就从今天早上直接跳到了昨天晚上，中间那一大段没了。这不是某一端的偶发 bug，Android、iOS、Web、PC 全都会出现。本文讲清楚这个问题是怎么产生的，我们为什么最终选择"服务端标出缺口、客户端按需补齐"的方案，以及在改动协议和四个客户端的同时，怎样把对现有用户的影响降到最低。
+
+![会话断层：本地已有的老消息与本次下发的 20 条之间缺了一段，往上翻到断层时按需补齐](/img/blog/2026-10-27/banner.png)
 
 <!--truncate-->
 
